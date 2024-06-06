@@ -1,3 +1,7 @@
+#Autor: Murilo Farias
+#Este projeto foi realizado com objetivo de utilizar a API Nominatim gratuitamente e preencher latitudes e longitudes de endereços que 
+#havia em uma planilha.
+
 import requests
 import openpyxl
 from time import sleep
@@ -42,3 +46,4 @@ wb.save(novo_nome_arquivo)
 
 # Mensagem indicando que o processo foi finalizado e o nome do novo arquivo
 print("Processo finalizado. O novo arquivo foi salvo como:", novo_nome_arquivo)
+

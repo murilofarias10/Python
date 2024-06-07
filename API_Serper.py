@@ -1,3 +1,8 @@
+#Autor: Murilo Farias
+#Este projeto foi realizado com objetivo de utilizar a API Serper com uma conta paga e realizar buscas no google
+#de maneira massiva, os dados que seriam utilizados como busca estavam numa planilha e após realizar as raspagem
+#era preenchido em outra planilha e salvo automaticamente.
+
 import openpyxl
 import requests
 import json

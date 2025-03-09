@@ -1,0 +1,9 @@
+{
+    "input": {
+        "content": "Contract_V1.pdf",
+        "category": "pdf",
+        "source": "original_contract"
+    },
+    "prompt": "You are an expert quiz generator, skilled at creating engaging and educational multiple-choice questions.\n\n# Task Description\nGenerate 3 multiple-choice questions about the given topic with 4\noptions each. Include explanations for the correct answers.\n\n# Output Format\n- Q1: Question 1\n- A1: Option 1\n- A2: Option 2\n- A3: Option 3\n- A4: Option 4\n- Correct Answer: 1\n- Explanation: Explanation for the correct answer\n\n# Input Content\n{content}\n\n# Requirements\n1. Each question must have exactly 4 options\n2. Include clear explanations for correct answers\n3. Ensure questions test understanding, not just memorization\n4. Use clear, concise language\n5. Make sure all options are plausible",
+    "llm_output": "LLM output will appear here..."
+}

@@ -34,12 +34,64 @@
 
 {% block extra_js %}
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add file input validation
+        const fileInput = document.getElementById('file-input');
+        fileInput.addEventListener('change', validateFile);
+    });
+    
+    function validateFile() {
+        const fileInput = document.getElementById('file-input');
+        const errorElement = document.getElementById('error-message');
+        const file = fileInput.files[0];
+        
+        // Clear previous errors
+        errorElement.classList.add('d-none');
+        document.getElementById('generate-btn').disabled = false;
+        
+        if (!file) {
+            return;
+        }
+        
+        // Check file type
+        const allowedTypes = ['.txt', '.pdf'];
+        const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
+        if (!allowedTypes.includes(fileExtension)) {
+            showError('Invalid file type. Please upload a .txt or .pdf file.');
+            fileInput.value = ''; // Clear the file input
+            return;
+        }
+        
+        // Check file size (max 10MB)
+        const maxSize = 10 * 1024 * 1024; // 10MB in bytes
+        if (file.size > maxSize) {
+            showError(`File is too large. Maximum size is 10MB. Your file is ${(file.size / (1024 * 1024)).toFixed(2)}MB.`);
+            fileInput.value = ''; // Clear the file input
+            return;
+        }
+        
+        // Check if file is empty
+        if (file.size === 0) {
+            showError('File is empty. Please upload a valid file with content.');
+            fileInput.value = ''; // Clear the file input
+            return;
+        }
+    }
+    
     document.getElementById('upload-form').addEventListener('submit', function(e) {
         e.preventDefault();
         
         const fileInput = document.getElementById('file-input');
         if (!fileInput.files.length) {
             showError('Please select a file to upload');
+            return;
+        }
+        
+        // Validate file again before submission
+        validateFile();
+        
+        // If there's an error message visible, don't proceed
+        if (!document.getElementById('error-message').classList.contains('d-none')) {
             return;
         }
         
@@ -53,9 +105,17 @@
         
         fetch('/upload', {
             method: 'POST',
-            body: formData
+            body: formData,
+            credentials: 'same-origin' // Include cookies in the request
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(data => {
+                    throw new Error(data.error || 'Server error');
+                });
+            }
+            return response.json();
+        })
         .then(data => {
             document.getElementById('loading').classList.add('d-none');
             
@@ -71,7 +131,7 @@
         })
         .catch(error => {
             document.getElementById('loading').classList.add('d-none');
-            showError('An error occurred while processing your request');
+            showError(error.message || 'An error occurred while processing your request');
             console.error('Error:', error);
             // Re-enable button on error
             document.getElementById('generate-btn').disabled = false;

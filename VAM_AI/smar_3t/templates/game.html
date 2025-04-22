@@ -38,7 +38,7 @@
                     <button id="get-ai-btn" class="btn btn-info" disabled>Get AI Response</button>
                     <div>
                         <button id="generate-another-btn" class="btn btn-primary me-2">Generate Another Question</button>
-                        <button id="new-question-btn" class="btn btn-secondary">Back to Upload</button>
+                        <button id="new-question-btn" class="btn btn-secondary">Upload new file</button>
                     </div>
                 </div>
             </div>
@@ -65,6 +65,7 @@
 {% block extra_js %}
 <script>
     let currentFileId = null;
+    let sessionId = null;
     
     document.addEventListener('DOMContentLoaded', function() {
         // Get question data from sessionStorage
@@ -73,6 +74,11 @@
         if (!questionData.question) {
             window.location.href = '/';
             return;
+        }
+        
+        // Store session_id if available
+        if (questionData.session_id) {
+            sessionId = questionData.session_id;
         }
         
         // Make sure the AI response button is disabled on page load
@@ -97,6 +103,8 @@
         
         // Set up new question button
         document.getElementById('new-question-btn').addEventListener('click', function() {
+            // Clear session data before going home
+            clearSession();
             window.location.href = '/';
         });
         
@@ -193,7 +201,8 @@
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            credentials: 'same-origin' // Include cookies in the request
         })
         .then(response => response.json())
         .then(data => {
@@ -231,7 +240,8 @@
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            credentials: 'same-origin' // Include cookies in the request
         })
         .then(response => response.json())
         .then(data => {
@@ -252,5 +262,30 @@
             console.error('Error:', error);
         });
     }
+    
+    // Function to clear session data when going back to home
+    function clearSession() {
+        // Call the clear-session endpoint
+        fetch('/clear-session', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'same-origin'
+        })
+        .then(() => {
+            // Clear session storage
+            sessionStorage.removeItem('questionData');
+        })
+        .catch(error => {
+            console.error('Error clearing session:', error);
+        });
+    }
+    
+    // Add event listener to handle page unload/navigation
+    window.addEventListener('beforeunload', function() {
+        // This will attempt to clean up if the user closes the tab or navigates away
+        clearSession();
+    });
 </script>
 {% endblock %}

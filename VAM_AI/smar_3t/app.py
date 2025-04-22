@@ -1,5 +1,6 @@
 import os
-from flask import Flask, render_template, request, jsonify, session
+from flask import Flask, render_template, request, jsonify
+from storage import diff_store
 from werkzeug.utils import secure_filename
 import random
 import PyPDF2
@@ -35,7 +36,6 @@ class SimpleAgent:
             return response.choices[0].message.content.strip()
         except Exception as e:
             return f"Error in generating LLM output: {str(e)}"
-
 
 def create_agent(system_prompt=None):
     return SimpleAgent(system_prompt)
@@ -157,11 +157,11 @@ def process_file(file_path):
 
 # Configure Flask app
 app = Flask(__name__)
-app.secret_key = os.urandom(24)  # For session management
 
 # Configure upload folder
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf'}
+MAX_CONTENT_LENGTH = 10 * 1024 * 1024  # 10MB limit
 
 # Store uploaded files in memory for reuse
 uploaded_files = {}
@@ -175,6 +175,28 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+# Helper function to validate file content
+def validate_file(file):
+    """Validate file size and content"""
+    if not file or file.filename == '':
+        return "No file selected"
+        
+    if not allowed_file(file.filename):
+        return "File type not allowed. Please upload a .txt or .pdf file"
+    
+    # Check if file is empty
+    file.seek(0, os.SEEK_END)
+    file_size = file.tell()
+    file.seek(0)  # Reset file pointer
+    
+    if file_size == 0:
+        return "File is empty"
+    
+    if file_size > MAX_CONTENT_LENGTH:
+        return f"File too large. Maximum size is {MAX_CONTENT_LENGTH/1024/1024}MB"
+    
+    return None
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -186,10 +208,12 @@ def upload_file():
     
     file = request.files['file']
     
-    if file.filename == '':
-        return jsonify({"error": "No selected file"}), 400
+    # Validate file
+    error = validate_file(file)
+    if error:
+        return jsonify({"error": error}), 400
     
-    if file and allowed_file(file.filename):
+    try:
         filename = secure_filename(file.filename)
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(file_path)
@@ -197,7 +221,12 @@ def upload_file():
         # Generate a unique file ID and store the path
         file_id = str(random.randint(10000, 99999))
         uploaded_files[file_id] = file_path
-        session['current_file_id'] = file_id
+        
+        # Generate a unique session ID for this user if not in cookie
+        session_id = request.cookies.get('session_id', str(random.randint(100000, 999999)))
+        
+        # Store file_id in diff_store instead of session
+        diff_store.set(session_id, 'current_file_id', file_id)
         
         # Process the file and generate a question
         question_data = process_file(file_path)
@@ -205,15 +234,22 @@ def upload_file():
         if "error" in question_data:
             return jsonify({"error": question_data["error"]}), 400
         
-        # Store the complete sentence in session for AI response later
-        session['complete_sentence'] = question_data['complete_sentence']
+        # Store the complete sentence in diff_store for AI response later
+        diff_store.set(session_id, 'complete_sentence', question_data['complete_sentence'])
         
-        # Add file_id to the response
+        # Add file_id and session_id to the response
         question_data['file_id'] = file_id
+        question_data['session_id'] = session_id
         
-        return jsonify(question_data), 200
-    
-    return jsonify({"error": "File type not allowed"}), 400
+        response = jsonify(question_data)
+        
+        # Set session_id cookie if not already set
+        if 'session_id' not in request.cookies:
+            response.set_cookie('session_id', session_id, max_age=3600)
+            
+        return response, 200
+    except Exception as e:
+        return jsonify({"error": f"Error processing file: {str(e)}"}), 500
 
 @app.route('/game')
 def game():
@@ -221,38 +257,78 @@ def game():
 
 @app.route('/generate-another', methods=['POST'])
 def generate_another():
-    # Get the current file ID from session
-    file_id = session.get('current_file_id')
+    # Get session_id from cookie
+    session_id = request.cookies.get('session_id')
+    if not session_id:
+        return jsonify({"error": "Session expired. Please upload a file again."}), 400
+    
+    # Get the current file ID from diff_store
+    file_id = diff_store.get(session_id, 'current_file_id')
     
     if not file_id or file_id not in uploaded_files:
         return jsonify({"error": "No file available. Please upload a file first."}), 400
     
-    # Get the file path and process it again
-    file_path = uploaded_files[file_id]
-    
-    # Process the file and generate a new question
-    question_data = process_file(file_path)
-    
-    if "error" in question_data:
-        return jsonify({"error": question_data["error"]}), 400
-    
-    # Store the complete sentence in session for AI response later
-    session['complete_sentence'] = question_data['complete_sentence']
-    
-    # Add file_id to the response
-    question_data['file_id'] = file_id
-    
-    return jsonify(question_data), 200
+    try:
+        # Get the file path and process it again
+        file_path = uploaded_files[file_id]
+        
+        # Process the file and generate a new question
+        question_data = process_file(file_path)
+        
+        if "error" in question_data:
+            return jsonify({"error": question_data["error"]}), 400
+        
+        # Store the complete sentence in diff_store for AI response later
+        diff_store.set(session_id, 'complete_sentence', question_data['complete_sentence'])
+        
+        # Add file_id to the response
+        question_data['file_id'] = file_id
+        question_data['session_id'] = session_id
+        
+        return jsonify(question_data), 200
+    except Exception as e:
+        return jsonify({"error": f"Error generating question: {str(e)}"}), 500
 
 @app.route('/ai-response', methods=['POST'])
 def ai_response():
-    complete_sentence = session.get('complete_sentence', '')
+    # Get session_id from cookie
+    session_id = request.cookies.get('session_id')
+    if not session_id:
+        return jsonify({"error": "Session expired. Please upload a file again."}), 400
+    
+    complete_sentence = diff_store.get(session_id, 'complete_sentence', '')
     
     if not complete_sentence:
         return jsonify({"error": "No sentence available"}), 400
     
-    response = generate_ia_response(complete_sentence)
-    return jsonify({"response": response}), 200
+    try:
+        response = generate_ia_response(complete_sentence)
+        return jsonify({"response": response}), 200
+    except Exception as e:
+        return jsonify({"error": f"Error generating AI response: {str(e)}"}), 500
+
+@app.route('/clear-session', methods=['POST'])
+def clear_session():
+    """Clear user session data when they go home"""
+    session_id = request.cookies.get('session_id')
+    if session_id:
+        # Clean up diff_store
+        diff_store.delete(session_id)
+        
+        # Clean up file if it exists
+        file_id = diff_store.get(session_id, 'current_file_id')
+        if file_id and file_id in uploaded_files:
+            file_path = uploaded_files[file_id]
+            try:
+                if os.path.exists(file_path):
+                    os.remove(file_path)
+                del uploaded_files[file_id]
+            except Exception:
+                pass  # Ignore errors when cleaning up files
+    
+    response = jsonify({"status": "success"})
+    response.delete_cookie('session_id')
+    return response, 200
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=7861, debug=True)

@@ -1,13 +1,14 @@
 import os
-import gradio as gr
+import gradio as gr #Web UI
 import random
+import PyPDF2 #handle pdf
 from dotenv import load_dotenv
 from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
 #pip install azure-ai-inference
-#pip install gradio
+#pip install gradio 
 #pip install python-dotenv
 #pip install PyPDF2  # For PDF file support
 
@@ -48,7 +49,7 @@ def clean_invalid_utf8(text):
     # Filter out surrogate pairs and other problematic characters
     return ''.join(char for char in text if 0 < ord(char) < 0xD800 or 0xDFFF < ord(char) < 0x10000)
 
-# --- 2 Validate File ---
+# --- 2 Validate File, handling pdf and txt ---
 def read_file(file):
     try:
         if not file:

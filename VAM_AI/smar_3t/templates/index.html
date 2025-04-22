@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}SmartQuiz - Upload{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-light">
+                <h2 class="text-center">Upload a File</h2>
+            </div>
+            <div class="card-body">
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="file-input" class="form-label">Upload TXT or PDF file</label>
+                        <input type="file" class="form-control" id="file-input" name="file" accept=".txt,.pdf" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Generate Question</button>
+                    </div>
+                </form>
+                <div id="loading" class="text-center mt-3 d-none">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p>Processing your file...</p>
+                </div>
+                <div id="error-message" class="alert alert-danger mt-3 d-none"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.getElementById('upload-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const fileInput = document.getElementById('file-input');
+        if (!fileInput.files.length) {
+            showError('Please select a file to upload');
+            return;
+        }
+        
+        const formData = new FormData();
+        formData.append('file', fileInput.files[0]);
+        
+        // Show loading indicator
+        document.getElementById('loading').classList.remove('d-none');
+        document.getElementById('error-message').classList.add('d-none');
+        
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('loading').classList.add('d-none');
+            
+            if (data.error) {
+                showError(data.error);
+            } else {
+                // Store question data in sessionStorage and redirect to game page
+                sessionStorage.setItem('questionData', JSON.stringify(data));
+                window.location.href = '/game';
+            }
+        })
+        .catch(error => {
+            document.getElementById('loading').classList.add('d-none');
+            showError('An error occurred while processing your request');
+            console.error('Error:', error);
+        });
+    });
+    
+    function showError(message) {
+        const errorElement = document.getElementById('error-message');
+        errorElement.textContent = message;
+        errorElement.classList.remove('d-none');
+    }
+</script>
+{% endblock %}

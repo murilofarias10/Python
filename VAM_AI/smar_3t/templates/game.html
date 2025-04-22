@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+
+{% block title %}SmartQuiz - Game{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-light">
+                <h2 class="text-center">Fill in the blank</h2>
+            </div>
+            <div class="card-body">
+                <div id="question-container">
+                    <h3 id="question-text" class="mb-4"></h3>
+                    
+                    <div class="mb-4">
+                        <h4>Choose the correct answer:</h4>
+                        <div id="options-container" class="list-group">
+                            <!-- Options will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div id="result-container" class="alert d-none mb-4"></div>
+                    
+                    <div id="answer-reveal" class="d-none">
+                        <h4>Answer:</h4>
+                        <p id="correct-answer" class="fw-bold"></p>
+                        <h4>Complete sentence:</h4>
+                        <p id="complete-sentence"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-between">
+                    <button id="get-ai-btn" class="btn btn-info" disabled>Get AI Response</button>
+                    <button id="new-question-btn" class="btn btn-secondary">Back to Upload</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="ai-response-container" class="card shadow d-none">
+            <div class="card-header bg-light">
+                <h2 class="text-center">AI Context</h2>
+            </div>
+            <div class="card-body">
+                <div id="ai-loading" class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p>Generating AI response...</p>
+                </div>
+                <div id="ai-content" class="d-none"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get question data from sessionStorage
+        const questionData = JSON.parse(sessionStorage.getItem('questionData') || '{}');
+        
+        if (!questionData.question) {
+            window.location.href = '/';
+            return;
+        }
+        
+        // Display question
+        document.getElementById('question-text').textContent = questionData.question;
+        
+        // Display options
+        const optionsContainer = document.getElementById('options-container');
+        questionData.options.forEach((option, index) => {
+            const optionBtn = document.createElement('button');
+            optionBtn.className = 'list-group-item list-group-item-action';
+            optionBtn.textContent = option;
+            optionBtn.dataset.option = option;
+            optionBtn.addEventListener('click', function() {
+                checkAnswer(option, questionData.correct_option);
+            });
+            optionsContainer.appendChild(optionBtn);
+        });
+        
+        // Set up new question button
+        document.getElementById('new-question-btn').addEventListener('click', function() {
+            window.location.href = '/';
+        });
+        
+        // Set up AI response button
+        document.getElementById('get-ai-btn').addEventListener('click', function() {
+            getAIResponse();
+        });
+    });
+    
+    function checkAnswer(selectedOption, correctOption) {
+        const resultContainer = document.getElementById('result-container');
+        const answerReveal = document.getElementById('answer-reveal');
+        const questionData = JSON.parse(sessionStorage.getItem('questionData') || '{}');
+        
+        // Disable all option buttons
+        const optionButtons = document.querySelectorAll('#options-container button');
+        optionButtons.forEach(btn => {
+            btn.disabled = true;
+            if (btn.dataset.option === correctOption) {
+                btn.classList.add('list-group-item-success');
+            }
+        });
+        
+        // Show result
+        resultContainer.classList.remove('d-none');
+        
+        if (selectedOption === correctOption) {
+            resultContainer.classList.add('alert-success');
+            resultContainer.textContent = 'Correct! 🎉';
+        } else {
+            resultContainer.classList.add('alert-danger');
+            resultContainer.textContent = 'Incorrect. Try again! 😕';
+        }
+        
+        // Show answer
+        document.getElementById('correct-answer').textContent = 
+            questionData.answer + ' (' + questionData.correct_option + ')';
+        document.getElementById('complete-sentence').textContent = questionData.complete_sentence;
+        answerReveal.classList.remove('d-none');
+        
+        // Enable AI response button
+        document.getElementById('get-ai-btn').disabled = false;
+    }
+    
+    function getAIResponse() {
+        const aiContainer = document.getElementById('ai-response-container');
+        const aiLoading = document.getElementById('ai-loading');
+        const aiContent = document.getElementById('ai-content');
+        
+        // Show AI container and loading
+        aiContainer.classList.remove('d-none');
+        aiLoading.classList.remove('d-none');
+        aiContent.classList.add('d-none');
+        
+        // Get AI response
+        fetch('/ai-response', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            aiLoading.classList.add('d-none');
+            
+            if (data.error) {
+                aiContent.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+            } else {
+                aiContent.innerHTML = `<div class="ai-response">${data.response}</div>`;
+            }
+            
+            aiContent.classList.remove('d-none');
+        })
+        .catch(error => {
+            aiLoading.classList.add('d-none');
+            aiContent.innerHTML = `<div class="alert alert-danger">An error occurred while getting AI response</div>`;
+            aiContent.classList.remove('d-none');
+            console.error('Error:', error);
+        });
+    }
+</script>
+{% endblock %}

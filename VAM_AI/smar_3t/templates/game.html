@@ -11,7 +11,7 @@
             </div>
             <div class="card-body">
                 <div class="alert alert-warning mb-4">
-                    <strong><i class="fas fa-exclamation-triangle"></i> Attention:</strong> You only have 1 attempt to fill in the blank.
+                    <strong><i class="fas fa-exclamation-triangle"></i> Attention:</strong> Keep trying until you select the correct answer!
                 </div>
                 <div id="question-container">
                     <h3 id="question-text" class="mb-4"></h3>
@@ -75,6 +75,9 @@
             return;
         }
         
+        // Make sure the AI response button is disabled on page load
+        document.getElementById('get-ai-btn').disabled = true;
+        
         // Display question
         document.getElementById('question-text').textContent = questionData.question;
         
@@ -85,8 +88,9 @@
             optionBtn.className = 'list-group-item list-group-item-action';
             optionBtn.textContent = option;
             optionBtn.dataset.option = option;
+            optionBtn.dataset.index = index; // Store the index for easier comparison
             optionBtn.addEventListener('click', function() {
-                checkAnswer(option, questionData.correct_option);
+                checkAnswer(this.dataset.index, questionData.options.indexOf(questionData.correct_option));
             });
             optionsContainer.appendChild(optionBtn);
         });
@@ -107,39 +111,59 @@
         });
     });
     
-    function checkAnswer(selectedOption, correctOption) {
+    function checkAnswer(selectedIndex, correctOptionIndex) {
         const resultContainer = document.getElementById('result-container');
         const answerReveal = document.getElementById('answer-reveal');
         const questionData = JSON.parse(sessionStorage.getItem('questionData') || '{}');
         
-        // Disable all option buttons
-        const optionButtons = document.querySelectorAll('#options-container button');
-        optionButtons.forEach(btn => {
-            btn.disabled = true;
-            if (btn.dataset.option === correctOption) {
-                btn.classList.add('list-group-item-success');
-            }
-        });
+        // Convert to numbers for comparison
+        selectedIndex = parseInt(selectedIndex);
         
-        // Show result
-        resultContainer.classList.remove('d-none');
+        // For debugging
+        console.log('Selected index:', selectedIndex);
+        console.log('Correct option:', questionData.correct_option);
+        console.log('All options:', questionData.options);
+        console.log('Correct index:', correctOptionIndex);
         
-        if (selectedOption === correctOption) {
+        // Clear previous result classes
+        resultContainer.classList.remove('alert-success', 'alert-danger', 'd-none');
+        
+        if (selectedIndex === correctOptionIndex) {
+            // Correct answer selected
             resultContainer.classList.add('alert-success');
             resultContainer.textContent = 'Correct! 🎉';
+            
+            // Disable all option buttons
+            const optionButtons = document.querySelectorAll('#options-container button');
+            optionButtons.forEach(btn => {
+                btn.disabled = true;
+                if (parseInt(btn.dataset.index) === correctOptionIndex) {
+                    btn.classList.add('list-group-item-success');
+                }
+            });
+            
+            // Show answer details
+            document.getElementById('correct-answer').textContent = 
+                questionData.answer + ' (' + questionData.correct_option + ')';
+            document.getElementById('complete-sentence').textContent = questionData.complete_sentence;
+            answerReveal.classList.remove('d-none');
+            
+            // Enable AI response button only when correct answer is selected
+            document.getElementById('get-ai-btn').disabled = false;
         } else {
+            // Wrong answer selected
             resultContainer.classList.add('alert-danger');
             resultContainer.textContent = 'Incorrect. Try again! 😕';
+            
+            // Disable only the wrong option button
+            const selectedButton = Array.from(document.querySelectorAll('#options-container button'))
+                .find(btn => parseInt(btn.dataset.index) === selectedIndex);
+            
+            if (selectedButton) {
+                selectedButton.disabled = true;
+                selectedButton.classList.add('list-group-item-danger');
+            }
         }
-        
-        // Show answer
-        document.getElementById('correct-answer').textContent = 
-            questionData.answer + ' (' + questionData.correct_option + ')';
-        document.getElementById('complete-sentence').textContent = questionData.complete_sentence;
-        answerReveal.classList.remove('d-none');
-        
-        // Enable AI response button
-        document.getElementById('get-ai-btn').disabled = false;
     }
     
     function generateAnotherQuestion() {
@@ -147,6 +171,9 @@
         const resultContainer = document.getElementById('result-container');
         const answerReveal = document.getElementById('answer-reveal');
         const aiContainer = document.getElementById('ai-response-container');
+        
+        // Disable the AI response button when generating a new question
+        document.getElementById('get-ai-btn').disabled = true;
         
         // Reset UI elements
         resultContainer.classList.add('d-none');
@@ -190,6 +217,9 @@
         const aiContainer = document.getElementById('ai-response-container');
         const aiLoading = document.getElementById('ai-loading');
         const aiContent = document.getElementById('ai-content');
+        
+        // Disable the button to prevent multiple requests
+        document.getElementById('get-ai-btn').disabled = true;
         
         // Show AI container and loading
         aiContainer.classList.remove('d-none');

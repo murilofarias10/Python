@@ -13,8 +13,13 @@ load_dotenv(override=True)
 
 # Setup your Azure Inference Client
 class SimpleAgent:
-    def __init__(self, system_prompt="You are an intelligent agent that generates context for quiz questions."):
-        self.system_prompt = system_prompt
+    def __init__(self, system_prompt=None):
+        default_prompt = (
+            "You are an expert reviewer. "
+            "Analyze the provided content and give helpful, constructive feedback. "
+            "Your feedback should be clear, insightful, and written in 3 to 5 lines maximum."
+        )
+        self.system_prompt = system_prompt if system_prompt else default_prompt
         self.token = os.environ["GITHUB_TOKEN"]
         self.endpoint = "https://models.github.ai/inference"
         self.model_name = "mistral-ai/Mistral-small"
@@ -27,14 +32,15 @@ class SimpleAgent:
                 UserMessage(content=user_input)
             ]
             response = self.client.complete(model=self.model_name, messages=messages)
-            return response.choices[0].message.content
+            return response.choices[0].message.content.strip()
         except Exception as e:
             return f"Error in generating LLM output: {str(e)}"
 
 
-def create_agent(system_prompt="You are an intelligent agent that generates context for quiz questions."):
+def create_agent(system_prompt=None):
     return SimpleAgent(system_prompt)
 
+# Create your updated expert agent
 agent = create_agent()
 
 # --- Clean Invalid UTF-8 Characters ---
@@ -115,7 +121,7 @@ def create_quiz_questions(content):
         "question": blank_sentence,
         "options": [f"Option {chr(97 + i)}: {opt}" for i, opt in enumerate(options)],
         "answer": chosen_word,
-        "correct_option": f"Option {chr(97 + options.index(chosen_word))}",
+        "correct_option": f"Option {chr(97 + options.index(chosen_word))}: {chosen_word}",
         "complete_sentence": complete_sentence
     }
 

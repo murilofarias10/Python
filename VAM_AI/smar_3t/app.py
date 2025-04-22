@@ -157,6 +157,9 @@ app.secret_key = os.urandom(24)  # For session management
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf'}
 
+# Store uploaded files in memory for reuse
+uploaded_files = {}
+
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
@@ -185,6 +188,11 @@ def upload_file():
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(file_path)
         
+        # Generate a unique file ID and store the path
+        file_id = str(random.randint(10000, 99999))
+        uploaded_files[file_id] = file_path
+        session['current_file_id'] = file_id
+        
         # Process the file and generate a question
         question_data = process_file(file_path)
         
@@ -194,6 +202,9 @@ def upload_file():
         # Store the complete sentence in session for AI response later
         session['complete_sentence'] = question_data['complete_sentence']
         
+        # Add file_id to the response
+        question_data['file_id'] = file_id
+        
         return jsonify(question_data), 200
     
     return jsonify({"error": "File type not allowed"}), 400
@@ -201,6 +212,31 @@ def upload_file():
 @app.route('/game')
 def game():
     return render_template('game.html')
+
+@app.route('/generate-another', methods=['POST'])
+def generate_another():
+    # Get the current file ID from session
+    file_id = session.get('current_file_id')
+    
+    if not file_id or file_id not in uploaded_files:
+        return jsonify({"error": "No file available. Please upload a file first."}), 400
+    
+    # Get the file path and process it again
+    file_path = uploaded_files[file_id]
+    
+    # Process the file and generate a new question
+    question_data = process_file(file_path)
+    
+    if "error" in question_data:
+        return jsonify({"error": question_data["error"]}), 400
+    
+    # Store the complete sentence in session for AI response later
+    session['complete_sentence'] = question_data['complete_sentence']
+    
+    # Add file_id to the response
+    question_data['file_id'] = file_id
+    
+    return jsonify(question_data), 200
 
 @app.route('/ai-response', methods=['POST'])
 def ai_response():

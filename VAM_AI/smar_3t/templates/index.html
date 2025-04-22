@@ -16,7 +16,7 @@
                         <input type="file" class="form-control" id="file-input" name="file" accept=".txt,.pdf" required>
                     </div>
                     <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary">Generate Question</button>
+                        <button type="submit" id="generate-btn" class="btn btn-primary">Generate Question</button>
                     </div>
                 </form>
                 <div id="loading" class="text-center mt-3 d-none">
@@ -46,9 +46,10 @@
         const formData = new FormData();
         formData.append('file', fileInput.files[0]);
         
-        // Show loading indicator
+        // Show loading indicator and disable button
         document.getElementById('loading').classList.remove('d-none');
         document.getElementById('error-message').classList.add('d-none');
+        document.getElementById('generate-btn').disabled = true;
         
         fetch('/upload', {
             method: 'POST',
@@ -60,6 +61,8 @@
             
             if (data.error) {
                 showError(data.error);
+                // Re-enable button on error
+                document.getElementById('generate-btn').disabled = false;
             } else {
                 // Store question data in sessionStorage and redirect to game page
                 sessionStorage.setItem('questionData', JSON.stringify(data));
@@ -70,6 +73,8 @@
             document.getElementById('loading').classList.add('d-none');
             showError('An error occurred while processing your request');
             console.error('Error:', error);
+            // Re-enable button on error
+            document.getElementById('generate-btn').disabled = false;
         });
     });
     

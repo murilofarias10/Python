@@ -10,6 +10,9 @@
                 <h2 class="text-center">Fill in the blank</h2>
             </div>
             <div class="card-body">
+                <div class="alert alert-warning mb-4">
+                    <strong><i class="fas fa-exclamation-triangle"></i> Attention:</strong> You only have 1 attempt to fill in the blank.
+                </div>
                 <div id="question-container">
                     <h3 id="question-text" class="mb-4"></h3>
                     
@@ -33,7 +36,10 @@
             <div class="card-footer">
                 <div class="d-flex justify-content-between">
                     <button id="get-ai-btn" class="btn btn-info" disabled>Get AI Response</button>
-                    <button id="new-question-btn" class="btn btn-secondary">Back to Upload</button>
+                    <div>
+                        <button id="generate-another-btn" class="btn btn-primary me-2">Generate Another Question</button>
+                        <button id="new-question-btn" class="btn btn-secondary">Back to Upload</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,6 +64,8 @@
 
 {% block extra_js %}
 <script>
+    let currentFileId = null;
+    
     document.addEventListener('DOMContentLoaded', function() {
         // Get question data from sessionStorage
         const questionData = JSON.parse(sessionStorage.getItem('questionData') || '{}');
@@ -86,6 +94,11 @@
         // Set up new question button
         document.getElementById('new-question-btn').addEventListener('click', function() {
             window.location.href = '/';
+        });
+        
+        // Set up generate another question button
+        document.getElementById('generate-another-btn').addEventListener('click', function() {
+            generateAnotherQuestion();
         });
         
         // Set up AI response button
@@ -127,6 +140,50 @@
         
         // Enable AI response button
         document.getElementById('get-ai-btn').disabled = false;
+    }
+    
+    function generateAnotherQuestion() {
+        // Show loading indicator
+        const resultContainer = document.getElementById('result-container');
+        const answerReveal = document.getElementById('answer-reveal');
+        const aiContainer = document.getElementById('ai-response-container');
+        
+        // Reset UI elements
+        resultContainer.classList.add('d-none');
+        answerReveal.classList.add('d-none');
+        aiContainer.classList.add('d-none');
+        
+        // Clear options container
+        const optionsContainer = document.getElementById('options-container');
+        optionsContainer.innerHTML = '';
+        
+        // Show loading
+        const questionContainer = document.getElementById('question-container');
+        questionContainer.innerHTML = '<div class="text-center"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div><p>Generating new question...</p></div>';
+        
+        // Request new question
+        fetch('/generate-another', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                questionContainer.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+            } else {
+                // Store question data in sessionStorage
+                sessionStorage.setItem('questionData', JSON.stringify(data));
+                
+                // Reload the page to show new question
+                location.reload();
+            }
+        })
+        .catch(error => {
+            questionContainer.innerHTML = '<div class="alert alert-danger">An error occurred while generating a new question</div>';
+            console.error('Error:', error);
+        });
     }
     
     function getAIResponse() {

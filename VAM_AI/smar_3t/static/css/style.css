@@ -5,6 +5,24 @@ body {
     color: #333;
 }
 
+/* Warning Banner */
+.alert-warning {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    color: #856404;
+    position: relative;
+    padding-left: 50px;
+}
+
+.alert-warning i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #ffc107;
+}
+
 header {
     background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

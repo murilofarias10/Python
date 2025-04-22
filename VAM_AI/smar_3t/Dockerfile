@@ -2,8 +2,8 @@
 FROM python:3.10-slim
 
 # Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 # Set working directory
 WORKDIR /app
@@ -23,6 +23,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY . .
+
+# Create necessary folders and set permissions
+RUN mkdir -p /app/uploads /app/output /app/output/images \
+    && chmod -R 777 /app/uploads /app/output
 
 # Expose the app port
 EXPOSE 7860

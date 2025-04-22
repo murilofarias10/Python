@@ -167,7 +167,7 @@ MAX_CONTENT_LENGTH = 10 * 1024 * 1024  # 10MB limit
 uploaded_files = {}
 
 if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
+    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -330,5 +330,8 @@ def clear_session():
     response.delete_cookie('session_id')
     return response, 200
 
+#if __name__ == "__main__":
+    #app.run(host="127.0.0.1", port=7861, debug=True)
+
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=7861, debug=True)
+    app.run(host='0.0.0.0', port=7860)

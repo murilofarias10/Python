@@ -38,7 +38,7 @@
                     <button id="get-ai-btn" class="btn btn-info" disabled>Get AI Response</button>
                     <div>
                         <button id="generate-another-btn" class="btn btn-primary me-2">Generate Another Question</button>
-                        <button id="new-question-btn" class="btn btn-secondary">Upload new file</button>
+                        <button id="new-question-btn" class="btn btn-secondary">Back to Upload</button>
                     </div>
                 </div>
             </div>
@@ -175,52 +175,108 @@
     }
     
     function generateAnotherQuestion() {
-        // Show loading indicator
-        const resultContainer = document.getElementById('result-container');
-        const answerReveal = document.getElementById('answer-reveal');
-        const aiContainer = document.getElementById('ai-response-container');
-        
-        // Disable the AI response button when generating a new question
-        document.getElementById('get-ai-btn').disabled = true;
-        
-        // Reset UI elements
-        resultContainer.classList.add('d-none');
-        answerReveal.classList.add('d-none');
-        aiContainer.classList.add('d-none');
-        
-        // Clear options container
-        const optionsContainer = document.getElementById('options-container');
-        optionsContainer.innerHTML = '';
-        
-        // Show loading
-        const questionContainer = document.getElementById('question-container');
-        questionContainer.innerHTML = '<div class="text-center"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div><p>Generating new question...</p></div>';
-        
-        // Request new question
-        fetch('/generate-another', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            credentials: 'same-origin' // Include cookies in the request
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.error) {
-                questionContainer.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
-            } else {
-                // Store question data in sessionStorage
-                sessionStorage.setItem('questionData', JSON.stringify(data));
-                
-                // Reload the page to show new question
-                location.reload();
-            }
-        })
-        .catch(error => {
-            questionContainer.innerHTML = '<div class="alert alert-danger">An error occurred while generating a new question</div>';
-            console.error('Error:', error);
+    // Show loading indicator
+    const resultContainer = document.getElementById('result-container');
+    const answerReveal = document.getElementById('answer-reveal');
+    const aiContainer = document.getElementById('ai-response-container');
+    
+    // Disable the AI response button when generating a new question
+    document.getElementById('get-ai-btn').disabled = true;
+    
+    // Reset UI elements
+    if (resultContainer) resultContainer.classList.add('d-none');
+    if (answerReveal) answerReveal.classList.add('d-none');
+    aiContainer.classList.add('d-none');
+    
+    // Show loading
+    const questionContainer = document.getElementById('question-container');
+    questionContainer.innerHTML = '<div class="text-center"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div><p>Generating new question...</p></div>';
+    
+    // Request new question
+    fetch('/generate-another', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        credentials: 'same-origin' // Include cookies in the request
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            questionContainer.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+        } else {
+            // Store question data in sessionStorage
+            sessionStorage.setItem('questionData', JSON.stringify(data));
+            
+            // Display the new question without reloading the page
+            displayNewQuestion(data);
+        }
+    })
+    .catch(error => {
+        questionContainer.innerHTML = '<div class="alert alert-danger">An error occurred while generating a new question</div>';
+        console.error('Error:', error);
+    });
+}
+
+function displayNewQuestion(questionData) {
+    const questionContainer = document.getElementById('question-container');
+
+    // Rebuild the question container
+    questionContainer.innerHTML = `
+        <h3 id="question-text" class="mb-4"></h3>
+        <div class="mb-4">
+            <h4>Choose the correct answer:</h4>
+            <div id="options-container" class="list-group"></div>
+        </div>
+        <div id="result-container" class="alert d-none mb-4"></div>
+        <div id="answer-reveal" class="d-none">
+            <h4>Answer:</h4>
+            <p id="correct-answer" class="fw-bold"></p>
+            <h4>Complete sentence:</h4>
+            <p id="complete-sentence"></p>
+        </div>
+    `;
+
+    // Update the question text
+    document.getElementById('question-text').textContent = questionData.question;
+
+    // Update options
+    const optionsContainer = document.getElementById('options-container');
+    questionData.options.forEach((option, index) => {
+        const optionBtn = document.createElement('button');
+        optionBtn.className = 'list-group-item list-group-item-action';
+        optionBtn.textContent = option;
+        optionBtn.dataset.option = option;
+        optionBtn.dataset.index = index;
+        optionBtn.addEventListener('click', function() {
+            checkAnswer(this.dataset.index, questionData.options.indexOf(questionData.correct_option));
         });
-    }
+        optionsContainer.appendChild(optionBtn);
+    });
+
+    // Reset AI button and hide AI container
+    document.getElementById('get-ai-btn').disabled = true;
+    document.getElementById('ai-response-container').classList.add('d-none');
+
+    // 🛠️ VERY IMPORTANT: Reattach button events because the page was rebuilt!
+
+    // "Generate Another Question" button
+    document.getElementById('generate-another-btn').addEventListener('click', function() {
+        generateAnotherQuestion();
+    });
+
+    // "Upload New File" button
+    document.getElementById('new-question-btn').addEventListener('click', function() {
+        clearSession();
+        window.location.href = '/';
+    });
+
+    // "Get AI Response" button
+    document.getElementById('get-ai-btn').addEventListener('click', function() {
+        getAIResponse();
+    });
+}
+
     
     function getAIResponse() {
         const aiContainer = document.getElementById('ai-response-container');

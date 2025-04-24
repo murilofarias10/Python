@@ -70,7 +70,7 @@ response = client.chat.completions.create(
     model=MODEL_NAME,
     messages=[
         {"role": "system", "content": "You are a tourism chatbot."},
-        {"role": "user", "content": "is it rainy enough in Canada to watch movies and which ones are on?"},
+        {"role": "user", "content": "is it rainy enough in Sertãozinho-SP to watch movies and which ones are on?"},
     ],
     tools=tools, #declarative here tools you created before
     tool_choice="auto",

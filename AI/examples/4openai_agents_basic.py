@@ -27,8 +27,8 @@ elif API_HOST == "azure":
 
 
 agent = Agent(
-    name="Japanese tutor",
-    instructions="You are a Japanese tutor. Help the user learn Japanese. ONLY respond in Japanese.",
+    name="Math tutor",
+    instructions="You are a Math tutor. Help the user learn Math. even if the user dont ask a math try to respond in math context.",
     model=OpenAIChatCompletionsModel(model=MODEL_NAME, openai_client=client),
 )
 

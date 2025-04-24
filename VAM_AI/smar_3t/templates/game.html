@@ -79,6 +79,14 @@
         // Store session_id if available
         if (questionData.session_id) {
             sessionId = questionData.session_id;
+            // Store in localStorage for persistence
+            localStorage.setItem('smartquiz_session_id', questionData.session_id);
+        } else {
+            // Try to retrieve from localStorage
+            const storedSessionId = localStorage.getItem('smartquiz_session_id');
+            if (storedSessionId) {
+                sessionId = storedSessionId;
+            }
         }
         
         // Make sure the AI response button is disabled on page load
@@ -101,23 +109,39 @@
             optionsContainer.appendChild(optionBtn);
         });
         
-        // Set up new question button
-        document.getElementById('new-question-btn').addEventListener('click', function() {
-            // Clear session data before going home
-            clearSession();
-            window.location.href = '/';
-        });
-        
-        // Set up generate another question button
-        document.getElementById('generate-another-btn').addEventListener('click', function() {
-            generateAnotherQuestion();
-        });
-        
-        // Set up AI response button
-        document.getElementById('get-ai-btn').addEventListener('click', function() {
-            getAIResponse();
-        });
+        // Set up button event listeners using event delegation
+        setupButtonEventListeners();
     });
+    
+    // Function to set up button event listeners
+    function setupButtonEventListeners() {
+        // Remove any existing event listeners by cloning and replacing elements
+        const generateAnotherBtn = document.getElementById('generate-another-btn');
+        const newQuestionBtn = document.getElementById('new-question-btn');
+        const getAiBtn = document.getElementById('get-ai-btn');
+        
+        // Clone and replace buttons to remove old event listeners
+        if (generateAnotherBtn) {
+            const newGenerateBtn = generateAnotherBtn.cloneNode(true);
+            generateAnotherBtn.parentNode.replaceChild(newGenerateBtn, generateAnotherBtn);
+            newGenerateBtn.addEventListener('click', generateAnotherQuestion);
+        }
+        
+        if (newQuestionBtn) {
+            const newUploadBtn = newQuestionBtn.cloneNode(true);
+            newQuestionBtn.parentNode.replaceChild(newUploadBtn, newQuestionBtn);
+            newUploadBtn.addEventListener('click', function() {
+                clearSession();
+                window.location.href = '/';
+            });
+        }
+        
+        if (getAiBtn) {
+            const newAiBtn = getAiBtn.cloneNode(true);
+            getAiBtn.parentNode.replaceChild(newAiBtn, getAiBtn);
+            newAiBtn.addEventListener('click', getAIResponse);
+        }
+    }
     
     function checkAnswer(selectedIndex, correctOptionIndex) {
         const resultContainer = document.getElementById('result-container');
@@ -175,6 +199,17 @@
     }
     
     function generateAnotherQuestion() {
+    // Prevent multiple clicks
+    const generateBtn = document.getElementById('generate-another-btn');
+    if (generateBtn && generateBtn.disabled) {
+        return; // Don't process if already in progress
+    }
+    
+    // Disable the button to prevent multiple clicks
+    if (generateBtn) {
+        generateBtn.disabled = true;
+    }
+    
     // Show loading indicator
     const resultContainer = document.getElementById('result-container');
     const answerReveal = document.getElementById('answer-reveal');
@@ -193,12 +228,16 @@
     questionContainer.innerHTML = '<div class="text-center"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div><p>Generating new question...</p></div>';
     
     // Request new question
+    // Get session ID from localStorage if available
+    const storedSessionId = localStorage.getItem('smartquiz_session_id') || sessionId;
+    
     fetch('/generate-another', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        credentials: 'same-origin' // Include cookies in the request
+        body: JSON.stringify({ session_id: storedSessionId }), // Send session_id in request body
+        credentials: 'same-origin' // Still include cookies as fallback
     })
     .then(response => response.json())
     .then(data => {
@@ -210,6 +249,15 @@
             
             // Display the new question without reloading the page
             displayNewQuestion(data);
+            
+            // Re-setup button event listeners after displaying new question
+            setupButtonEventListeners();
+        }
+        
+        // Re-enable the generate button
+        const generateBtn = document.getElementById('generate-another-btn');
+        if (generateBtn) {
+            generateBtn.disabled = false;
         }
     })
     .catch(error => {
@@ -257,28 +305,16 @@ function displayNewQuestion(questionData) {
     // Reset AI button and hide AI container
     document.getElementById('get-ai-btn').disabled = true;
     document.getElementById('ai-response-container').classList.add('d-none');
-
-    // 🛠️ VERY IMPORTANT: Reattach button events because the page was rebuilt!
-
-    // "Generate Another Question" button
-    document.getElementById('generate-another-btn').addEventListener('click', function() {
-        generateAnotherQuestion();
-    });
-
-    // "Upload New File" button
-    document.getElementById('new-question-btn').addEventListener('click', function() {
-        clearSession();
-        window.location.href = '/';
-    });
-
-    // "Get AI Response" button
-    document.getElementById('get-ai-btn').addEventListener('click', function() {
-        getAIResponse();
-    });
 }
 
     
     function getAIResponse() {
+        // Prevent multiple clicks
+        const aiBtn = document.getElementById('get-ai-btn');
+        if (aiBtn && aiBtn.disabled) {
+            return; // Don't process if already in progress
+        }
+        
         const aiContainer = document.getElementById('ai-response-container');
         const aiLoading = document.getElementById('ai-loading');
         const aiContent = document.getElementById('ai-content');
@@ -292,12 +328,16 @@ function displayNewQuestion(questionData) {
         aiContent.classList.add('d-none');
         
         // Get AI response
-        fetch('/ai-response', {
+        // Get session ID from localStorage if available
+    const storedSessionId = localStorage.getItem('smartquiz_session_id') || sessionId;
+    
+    fetch('/ai-response', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            credentials: 'same-origin' // Include cookies in the request
+            body: JSON.stringify({ session_id: storedSessionId }), // Send session_id in request body
+            credentials: 'same-origin' // Still include cookies as fallback
         })
         .then(response => response.json())
         .then(data => {
@@ -321,17 +361,22 @@ function displayNewQuestion(questionData) {
     
     // Function to clear session data when going back to home
     function clearSession() {
+        // Get session ID from localStorage if available
+        const storedSessionId = localStorage.getItem('smartquiz_session_id') || sessionId;
+        
         // Call the clear-session endpoint
         fetch('/clear-session', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
+            body: JSON.stringify({ session_id: storedSessionId }), // Send session_id in request body
             credentials: 'same-origin'
         })
         .then(() => {
-            // Clear session storage
+            // Clear session storage and localStorage
             sessionStorage.removeItem('questionData');
+            localStorage.removeItem('smartquiz_session_id');
         })
         .catch(error => {
             console.error('Error clearing session:', error);

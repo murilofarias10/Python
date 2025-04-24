@@ -28,7 +28,7 @@ agent = AssistantAgent(
 
 async def main() -> None:
     response = await agent.on_messages(
-        [TextMessage(content="hii how are you?", source="user")],
+        [TextMessage(content="hii how are you doing in Vancouver?", source="user")],
         cancellation_token=CancellationToken(),
     )
     print(response.chat_message.content)

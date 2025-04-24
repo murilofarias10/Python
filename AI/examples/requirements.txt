@@ -1,0 +1,16 @@
+python-dotenv
+azure-identity
+autogen-core
+autogen-ext
+autogen-agentchat
+openai
+tiktoken
+azure-ai-inference
+openai-agents
+rich
+graphviz
+
+
+
+
+

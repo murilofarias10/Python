@@ -13,11 +13,11 @@ response = client.chat.completions.create(
     messages=[
         {
             "role": "system",
-            "content": "You are a helpful assistant.",
+            "content": "You are a helpful analyst.",
         },
         {
             "role": "user",
-            "content": "I know Simple Agens, Multiple Agents, what more do you have for LLMs?",
+            "content": "I would like to know about tokens and costs?",
         },
     ],
     model=os.getenv("GITHUB_MODEL", "gpt-4o"),

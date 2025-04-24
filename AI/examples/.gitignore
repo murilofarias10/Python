@@ -1,1 +1,18 @@
 .env
+venv/
+
+#Create a new enviroment:
+#py -m venv venv <<< to create a new one
+#.\venv\Scripts\activate
+#pip install -r requirements.txt
+
+
+#.\venv\Scripts\activate
+
+#deactivate
+
+
+#bas echo $GITHUB_TOKEN
+#cmd echo %GITHUB_TOKEN%
+
+#Extension: AI Toolkit for Visual Studio Code

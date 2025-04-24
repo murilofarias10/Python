@@ -222,8 +222,8 @@ def upload_file():
         file_id = str(random.randint(10000, 99999))
         uploaded_files[file_id] = file_path
         
-        # Generate a unique session ID for this user if not in cookie
-        session_id = request.cookies.get('session_id', str(random.randint(100000, 999999)))
+        # Generate a unique session ID for this user
+        session_id = str(random.randint(100000, 999999))
         
         # Store file_id in diff_store instead of session
         diff_store.set(session_id, 'current_file_id', file_id)
@@ -257,8 +257,9 @@ def game():
 
 @app.route('/generate-another', methods=['POST'])
 def generate_another():
-    # Get session_id from cookie
-    session_id = request.cookies.get('session_id')
+    # Get session_id from request body or cookie
+    data = request.get_json() or {}
+    session_id = data.get('session_id') or request.cookies.get('session_id')
     if not session_id:
         return jsonify({"error": "Session expired. Please upload a file again."}), 400
     
@@ -271,6 +272,10 @@ def generate_another():
     try:
         # Get the file path and process it again
         file_path = uploaded_files[file_id]
+        
+        # Check if the file still exists on disk
+        if not os.path.exists(file_path):
+            return jsonify({"error": "The uploaded file no longer exists. Please upload a file again."}), 400
         
         # Process the file and generate a new question
         question_data = process_file(file_path)
@@ -291,10 +296,22 @@ def generate_another():
 
 @app.route('/ai-response', methods=['POST'])
 def ai_response():
-    # Get session_id from cookie
-    session_id = request.cookies.get('session_id')
+    # Get session_id from request body or cookie
+    data = request.get_json() or {}
+    session_id = data.get('session_id') or request.cookies.get('session_id')
     if not session_id:
         return jsonify({"error": "Session expired. Please upload a file again."}), 400
+    
+    # Get the current file ID from diff_store
+    file_id = diff_store.get(session_id, 'current_file_id')
+    
+    if not file_id or file_id not in uploaded_files:
+        return jsonify({"error": "No file available. Please upload a file first."}), 400
+    
+    # Get the file path and check if it exists on disk
+    file_path = uploaded_files[file_id]
+    if not os.path.exists(file_path):
+        return jsonify({"error": "The uploaded file no longer exists. Please upload a file again."}), 400
     
     complete_sentence = diff_store.get(session_id, 'complete_sentence', '')
     
@@ -310,13 +327,14 @@ def ai_response():
 @app.route('/clear-session', methods=['POST'])
 def clear_session():
     """Clear user session data when they go home"""
-    session_id = request.cookies.get('session_id')
+    # Get session_id from request body or cookie
+    data = request.get_json() or {}
+    session_id = data.get('session_id') or request.cookies.get('session_id')
     if session_id:
-        # Clean up diff_store
-        diff_store.delete(session_id)
+        # Get the current file ID from diff_store first
+        file_id = diff_store.get(session_id, 'current_file_id')
         
         # Clean up file if it exists
-        file_id = diff_store.get(session_id, 'current_file_id')
         if file_id and file_id in uploaded_files:
             file_path = uploaded_files[file_id]
             try:
@@ -325,6 +343,9 @@ def clear_session():
                 del uploaded_files[file_id]
             except Exception:
                 pass  # Ignore errors when cleaning up files
+        
+        # Clean up diff_store after getting the file_id
+        diff_store.delete(session_id)
     
     response = jsonify({"status": "success"})
     response.delete_cookie('session_id')

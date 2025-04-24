@@ -12,9 +12,9 @@ from dotenv import load_dotenv
 from rich.logging import RichHandler
 
 # Setup logging with rich
-                    #original WARNING
-                    #changed for DEBUG
-logging.basicConfig(level=logging.DEBUG, format="%(message)s", datefmt="[%X]", handlers=[RichHandler()])
+                    #original WARNING this just the INFO level
+                    #changed for DEBUG this is the entire log
+logging.basicConfig(level=logging.WARNING, format="%(message)s", datefmt="[%X]", handlers=[RichHandler()])
 logger = logging.getLogger("weekend_planner")
 
 # Disable tracing since we're not connected to a supported tracing provider
@@ -36,7 +36,7 @@ elif API_HOST == "azure":
     MODEL_NAME = os.environ["AZURE_OPENAI_CHAT_DEPLOYMENT"]
 
 
-#THIS IS A DECORATED
+#THIS IS A DECORATOR
 @function_tool
 def get_weather(city: str) -> str:
     logger.info(f"Getting weather for {city}")
@@ -53,7 +53,7 @@ def get_weather(city: str) -> str:
             "description": "Rainy",
         }
 
-
+#THIS IS A DECORATOR
 @function_tool
 def get_activities(city: str, date: str) -> list:
     logger.info(f"Getting activities for {city} on {date}")
@@ -63,7 +63,7 @@ def get_activities(city: str, date: str) -> list:
         {"name": "STUDY TIME", "location": city},
     ]
 
-
+#THIS IS A DECORATOR
 @function_tool
 def get_current_date() -> str:
     logger.info("Getting current date")
@@ -79,10 +79,11 @@ agent = Agent(
 
 
 async def main():
-    result = await Runner.run(agent, input="hii what can I do this week in Vancouver the summer is coming?")
+    result = await Runner.run(agent, input="hii what can I do this week in Sertãozinho-SP the summer is coming?")
     print(result.final_output)
 
 
 if __name__ == "__main__":
+    #logger.setLevel(logging.DEBUG)
     logger.setLevel(logging.INFO)
     asyncio.run(main())

@@ -26,7 +26,6 @@ elif API_HOST == "azure":
     )
     MODEL_NAME = os.environ["AZURE_OPENAI_CHAT_DEPLOYMENT"]
 
-
 @function_tool
 def get_weather(city: str) -> str:
     return {
@@ -35,23 +34,16 @@ def get_weather(city: str) -> str:
         "description": "Sunny",
     }
 
-
-agent = Agent(
-    name="Weather agent",
-    instructions="You can only provide weather information.",
-    tools=[get_weather],
-)
-
-spanish_agent = Agent(
-    name="Spanish agent",
-    instructions="You only speak Spanish.",
+japanese_agent = Agent(
+    name="japanese agent",
+    instructions="You only speak Japanese.",
     tools=[get_weather],
     model=OpenAIChatCompletionsModel(model=MODEL_NAME, openai_client=client),
 )
 
-english_agent = Agent(
-    name="English agent",
-    instructions="You only speak English",
+portuguese_agent = Agent(
+    name="portuguese agent",
+    instructions="You only speak Portuguese",
     tools=[get_weather],
     model=OpenAIChatCompletionsModel(model=MODEL_NAME, openai_client=client),
 )
@@ -59,19 +51,18 @@ english_agent = Agent(
 triage_agent = Agent(
     name="Triage agent",
     instructions="Handoff to the appropriate agent based on the language of the request.",
-    handoffs=[spanish_agent, english_agent],
+    handoffs=[japanese_agent, portuguese_agent], #to delegate to other agents
     model=OpenAIChatCompletionsModel(model=MODEL_NAME, openai_client=client),
 )
 
-
 async def main():
-    result = await Runner.run(triage_agent, input="Hola, ¿cómo estás? ¿Puedes darme el clima para San Francisco CA?")
+    result = await Runner.run(triage_agent, input="I would like to know the weather in Vancouver, feel free to select which language you think is better to respond.")
     gz_source = draw_graph(triage_agent, filename="openai_agents_handoffs.png")
+    
     # save graph to file in graphviz format
-    gz_source.save("openai_agents_handoffs.dot")
+    #gz_source.save("openai_agents_handoffs.dot")
 
     print(result.final_output)
-
 
 if __name__ == "__main__":
     asyncio.run(main())

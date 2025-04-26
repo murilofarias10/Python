@@ -1,0 +1,437 @@
+ORGANIZATINAL STRUCTURE:
+	Refers to the framework or system that defines how an organization arranges its resources, tasks, and responsibilities to achieve its goals. 
+	Impacts how companies operate, make decisions, and achieve their objectives.
+
+PURPOSE OF ORGANIZATIONAL STRUCTURE:
+	Clarification of roles and responsibilities defines who does what within a company.
+	Efficient communication and decision-making.
+	Resource allocation and coordination like budget, manpower, and equipment to different departments or business units as needed.
+
+TYPES OF ORGANIZATIONAL STRUCTURES:
+	Hierarchical Structure:
+		 (The oldest) organizations are organized like a pyramid.
+	CEO > DIRECTOR > MANAGER > SUPERVISOR
+
+	Flat Structure:
+		 (STARTUP) has minimal levels of hierarchy where employees have more autonomy and decision-making power.
+	
+	Functional Structure: employees are grouped by their specific job FUNCTIONS or areas of expertise. 
+
+	Matrix Structure: 
+		Mix of hierarchical and functional structure. 
+		Employees have multiple managers and report to both a functional manager and a project or product manager.
+
+	Divisional Structure: 
+		Is divided into separate divisions or units, often based on geographic REGIONS, PRODUCTS LINES , or customer SGMENTS, each with its own leadership.
+	
+FUNCTIONAL BUSINESS UNITS 
+	Functional Areas:
+		Refer to distinct departments or divisions within a business that focus on specific tasks or functions.
+
+	Roles within Functional Units:
+		Are the specific job positions or responsibilities assigned to individuals or teams within each department.
+
+	Advantages: Expertise, Efficiency, Clear Hierarchy, Training.
+	Disadvantages: Silos, Lack of Coordination, Limited Perspective, Resistance to Change.
+
+CROSS-FUNCTIONAL TEAMS
+	Are groups of individuals from different functional areas or departments within an organization who come together to work on a specific project or task.
+
+	Benefits: Diverse Expertise, Faster Decision-Making, Improved Quality, Enhanced Communication.
+	Challenges: Communication Barriers, Conflict of Priorities, Resistance To Change, Coordination Challenges.
+
+BUSINESS UNIT HIERARCHY:
+	Levels of Hierarchy: Each level has its own set of roles and functions within the organization.
+
+	Reporting Relationships and Authority Levels: define who reports to whom within the organization.
+
+	Impact of Hierarchy on Decision-Making: Hierarchy affects how decisions are made. 
+
+
+ROLES AND RESPONSIBILITIES:
+	Set of responsibilities and tasks assigned to an individual or a group.
+
+RESPONSIBILITIES WITHIN SPECIFIC ROLES:
+	Duties and actions that individuals or teams must perform within their roles.
+
+ROLE ALIGNMENT WITH ORGANIZATIONAL OBJECTIVES
+	Contribute to the overall goals and objectives of the organization.
+
+LEADERSHIP POSITION:
+	Managers:
+		They are responsible for steering in the right direction making decisions, and ensuring everyone is working together efficiently.
+
+	Supervisors:
+		They provide guidance, instructions, and support to team members.
+
+LEADERSHIP QUALITIES AND SKILLS:
+	Communication:
+		how to mix and communicate ideas effectively to different audiences (employees, investors, and customers).
+	Decision-Making:
+		involves making tough decisions.
+		Leaders assess the situation, consider the consequences, and choose the best course of action.
+how do you manage conflitct ?
+	Empathy:
+		They understand and relate to the feelings and needs of their team members, fostering a supportive and collaborative environment.
+
+LEADERSHIP GUIDING TEAMS AND ACHIEVING GOALS:
+	Vision and Goal Setting:
+		leader sets the direction and objectives for the team or organization
+
+	Motivation and Inspiration:
+		Leaders act as motivational speakers, igniting enthusiasm and dedication in their team members. 
+	Conflict Resolution:
+		Leaders are like skilled mediators who resolve disputes within the team to maintain a harmonious working environment.
+
+INTERACTIONS BETWEEN BUSINESS UNITS:
+	MEETINGS, COMMUNICATION TOOLS:
+		Work together to achieve common goals.
+	CROSS-FUNCTIONAL:
+		Employees from different departments coming together to tackle a specific project or task.
+	SHARING OF INFORMATION AND RESOURCES:
+		Exchanging knowledge, data, or assets to enhance their operations or solve problems.
+
+ROLE ALIGNMENT WITH ORGANIZATIONAL GOALS
+	COMMUNICATING STRATEGIC OBJECTIVIES:
+		Defining the long-term goals and direction of the organization.
+	MEASURING PERFORMANCE AND GOAL ALIGNMENT:
+		tracking progress toward achieving the established goals and ensuring that individual roles contribute to these objectives.
+	ADAPTATION OF ROLES TO MEET CHANGING GOALS:
+		IF goals evolve or shift, it's important to adjust the responsibilities and roles of employees to better align with these new objectives.
+
+COMMUNICATION  CHANNELS:
+	 Formal Communication:
+		refers to the official, structured, and professional way of conveying information within an organization or between individuals. EXEMPLE: EMAIL
+	Informal Communication:
+		is casual, unstructured, and often spontaneous communication between individuals, typically outside of official channels. EXEMPLE: CHATTING IN BREAK
+	Technology Tools for Communication:
+		Email, Video Conferencig. 
+	Challenges and Solutions in Communication:
+		Misinterpretation: misunderstood due to language barriers, cultural differences, or unclear communication.
+		Clear Communication: concise language, ask for clarification when needed, and provide context to avoid misinterpretation
+		Feedback: Encourage open feedback to ensure everyone understands and is on the same page
+		Challenges in Remote Communication: 
+			Lack of Non-Verbal Cues: lacks facial expressions and body language, making it challenging to convey emotions and intent.
+			Emoticons and Emojis: Use emoticons or emojis to add emotional context to text-based communication.
+			Regular Check-Ins: Schedule one-on-one check-ins to discuss feelings and concerns openly.
+
+ORGANIZATIONAL CHARTS: 
+	TYPES OF ORGANIZATIONAL:
+		Hierarchical Organizational Chart: It's like a pyramid with the highest authority at the peak and descending levels of authority as you move down.
+		Matrix Organizational Chart: where employees report to both a functional manager. 
+		Flat Organizational Chart: are few levels of management, and employees have direct access to the CEO or top leaders.
+
+	READING AND INTERPRETING ORGANIZATION CHARTS:
+		Identify Positions and Titles: positions like CEO, CFO, department heads.
+		Understand Reporting Relationships: Marketing Manager reports to the CMO.
+		Determine Communication Paths: Seeing lines connecting different departments can help you understand who needs to communicate with whom.
+
+	ROLE OF STRUCTURE IN DECISION-MAKING PROCESSES:
+		Gather Information: Collect data on employees, their roles, and reporting relationships.
+		Choose a Tool: You can use software like Microsoft Visio or even draw it on paper.
+		Regular Maintenance: After promotions or new hires, update the organization chart to keep it current.
+
+
+IMPACT ON DECISION MAKING:
+		Creating and updating Organizational Charts:
+			how it is organized, including the division of responsibilities, communication channels, and decision-making protocols.
+		Influence of hierarchy on decision authority:
+			levels of authority and power within an organization. It determines who has the final say in making decisions.
+		Collaboration in decision-making:
+			individuals or groups working together to reach a consensus or make a joint decision.
+
+ADAPTING TO CHANGE:
+		Responding to industry and market changes:
+			This involves making necessary adjustments in your business strategies, products, or services in response to shifts in the industry or market conditions.
+		Restructuring and reorganizing business units:
+			changing the internal structure or organization of a company to improve efficiency, respond to challenges, or seize new opportunities.
+		Employee engagement during change:
+			This involves actively involving and motivating employees during periods of change to ensure their commitment, cooperation, and successful adaptation to new 				processes or procedures
+
+
+	SDLC (Software Development Life Cycle):
+		is a systematic and structured  used in software engineering to design, develop, test, and maintain software systems	
+		It provides a clear roadmap for developers, testers, and project managers, reducing the chances of errors and delays.
+			
+	Phases:
+		Planning > Design > Implementation > Testing > Deployment
+		
+		Planning: 
+			Requirements Gathering: where you collect all the project requirements from stakeholders.
+			Feasibility Study: project is doable in terms of technology, resources, and budget
+			Project Scheduling: Create a timeline or schedule for the project
+		Design:
+			System Architecture Design: Design the overall structure and components of the software
+			Detailed Design: how each part of the software will work in detail, like designing the layout and features.
+			User Interface Design: Design the user interface, making it user-friendly and visually appealing
+		Implementation:
+			Coding: Write the actual code for the software
+			Unit Testing: Test each individual component or module of the software to ensure they work correctly
+			Integration Testing: Combine all the components and test how they work together
+		Testing:
+			Types of Testing: FUNCTIONAL checking if it does what it's supposed to , REGRESSION new changes don't break old features, 
+			PERFORMANCE evaluating its speed and efficiency).
+			Test Case Development: Create detailed test 
+			Test Execution: Actually run the tests
+		Deployment:
+			Rollout Strategies: Plan how to release the software to users.
+			User Training: Provide training and support to users 
+			Data Migration: If needed, transfer existing data to the new software
+
+	Models Waterfall:
+		Explanation: Model is a linear and sequential step-by-step
+		Overview: It was one of the earliest software development methodologies
+		Stages:
+			Requirements gathering: all project requirements are collected from stakeholders
+			Design: The system's architecture and design are created based on the gathered requirements
+			Implementation: Developers write code based on the design specifications
+			Testing: The developed software is rigorously tested to identify and fix any defects or issues.
+			Deployment: The fully tested and approved software is deployed to a production environment for end-users.
+			Maintenance: maintenance and support are provided to fix any post-deployment issues and to make updates or improvements.
+		Advantages:
+			Clarity: Clear and well-defined stages make it easy to understand and manage the project
+			Documentation: Extensive documentation is created at each stage, aiding in future maintenance and reference.
+			Stakeholder involvement: Stakeholders are involved early, ensuring their requirements are addressed.
+		Disadvantages (you can not going back in other phase).
+			Inflexibility: Changes are challenging and costly once the project is underway
+			Limited user feedback: Users may not see the software until late in the process.
+			Long delivery time: The entire project must be completed before delivery, potentially delaying benefits.
+			
+	Models Agil:
+		Explanation: Agile is an iterative and flexible approach 
+		Overview: emphasizes flexibility, collaboration, and customer feedback.
+		Gathering (Surveys, Feedbacks) > Design > Develop > Testing > Deployment > Maintenance
+		Four Keys values:	
+			Individuals and interactions over processes and tools
+			Working software over comprehensive documentation
+			Customer collaboration over contract negotiation
+			Responding to change over following a plan
+		Frameworks:
+			Scrum: 
+			work into time-boxed iterations called sprints.
+			roles like Scrum Master, Product Owner, and Development Team to manage and prioritize work.
+			
+			Scrum Roles:
+				Product Owner: Represents the customer and defines the product backlog (beetween tecnical and businees).
+				Scrum Master: Facilitates the Scrum process, removes obstacles, and ensures the team follows Scrum principles (make peoples follow the rules scrum).
+				Development Team: Cross-functional group responsible for delivering the product.
+	
+			Scrum Artifacts: 
+				Product Backlog: A prioritized list of features and user stories representing all work needed for the product.
+				Sprint Backlog: A subset of the product backlog items selected for a specific sprint.
+				Increment: The working product incrementally improved during each sprint.
+
+			Scrum Ceremonies (Activities to do)
+				Sprint Planning (what, who, whem): plans what they will work on and commits to completing certain backlog items. 
+				Daily Standup: A short daily meeting where team members share progress, discuss impediments, and plan their day's work.
+				Sprint Review: A meeting at the end of a sprint to showcase the increment and gather feedback from stakeholders.
+				Sprint Retrospective: A reflective session after the sprint review to identify what went well and what can be improved.
+
+			Kanban: 
+			Kanban visualizes work on a board with columns.
+			lean and agile project management methodology that originated from the manufacturing industry.
+			Kanban boards: TODO | IN PROGRESSS | COMPLETED | TESTED | DEPLOYMENT
+			
+			Work-in-Progress:
+				 (WIP) Limits indicating the MAXIMUM NUMBER OF TASKS THAT CAN BE IN PROGESS at any given time.
+				 prevent overloading the team and help maintain a steady workflow.
+			
+			Continuous Improvement in Kanban:
+				review their Kanban board to identify bottlenecks and inefficiencies.
+				
+	Iterative and Incremental Models:
+		Iterative: (Better version)
+
+		Explanation: involve breaking the project into small iterations or increments, where each iteration builds upon the previous one.
+		Benefits of Iterative Development:
+				Improved flexibility: Allows for changes and improvements as the project progresses.
+				Early and frequent feedback: Stakeholders can see working portions of the software sooner.
+				Risk management: Identifies issues early, reducing the likelihood(probabilidade) of major problems later on.
+		Drawbacks of Iterative:
+			Potentially longer development time: Multiple iterations can extend the project timeline
+			Increased complexity: Managing multiple iterations requires careful planning
+
+		Incremental: (more functions version)
+		involves building the software in small, usable increments or modules. Each module represents a functional part of the system.
+		Advantages of Incremental Development:
+				Early functionality: Users can start using and benefiting from the software as soon as the first module is complete
+				Easier testing and debugging: Smaller modules are easier to test and fix
+				Scalability: New modules can be added to expand functionality
+
+	Spiral:
+		The Spiral Model combines iterative development with elements of the Waterfall Model
+
+	V-Model (Validation and Verification Model):
+		extension of the Waterfall Model, where each development phase is paired with a corresponding testing phase.
+		Parallel Stages: In V-Model, development activities run in parallel with corresponding testing activities
+		Traceability means establishing and maintaining a link between each development phase and its corresponding testing phase.
+
+
+SCRUM + AGILE
+KANBAN + SCRUM
+ITEATIVE/INCREMENTAL + KANBAN
+
+Role of stakeholders:
+	Project Manager:
+
+	Developers:
+
+	Testers:
+			
+	Business Analysts:
+
+	Clients/End-users:
+
+Tools and Technologies in SDLC (Software Development Life Cycle):
+	Version Control Systems:
+
+	Integrated Development Environments (IDEs)
+
+	Project Management Software:
+		P6, MS Project
+
+	Automated Testing Tools:
+		Selenium, Junit, PyTest
+
+	Collaboration Tools:
+		Slack, Jira, 
+
+Documentation in SDLC (Software Development Life Cycle):
+	Requirement Specification Documents:
+
+	Design Documents:
+
+	Test Plans and Reports
+		
+	User Manuals:
+	
+	Change Requests:
+	
+Quality Assurance and Compliance
+	Quality Control QC:
+
+	Quality Assurance QA: you know before the user
+
+Compliance with Industry Standards:
+	ISO (International Organization for Standardization):
+
+	CMMI (Capability Maturity Model Integration):
+
+Code Reviews and Inspections:
+	Code Reviews:
+	
+	Inspections:
+
+Challenges and Risks in SDLC (Software Development Life Cycle):
+	Scope Creep (how much you allow someone go with scope preview)
+		Challenge: Uncontrolled expansion of project scope
+
+	Budget and Resource Constraints:
+		Challenge: Limited resources (time, money, skilled personnel)
+
+	Project Delays:
+		Challenge: Delays in any phase can push back the projects completion date.
+
+	Security Concerns:
+		Challenge: Ensuring the software is secure against cyber threats and data breaches
+
+	Change Management:
+		Challenge: Handling changes in project requirements or goals effectively.
+
+2025-01-23
+	CI/CD Pipelines (Continuous Integration/Continuous Deployment):
+		pipelines are automated workflows that allow developers to build, test, and deploy their code changes efficiently and consistently
+
+	Automated Deployment:
+		is the process of deploying software updates to different environments.
+
+	Monitoring and Logging:
+		tracking the performance of your applications and infrastructure, while logging records important events and errors for analysis.
+
+	Infrastructure as Code (IaC):
+		defining and managing infrastructure (e.g., servers, networks) using code, making it easier to scale and replicate environments
+
+	Managing changes in SDLC (Software Development Life Cycle):
+		involves a systematic approach to handling alterations to software projects
+		well-documented, planned, and implemented to minimize disruptions and errors.
+	
+	Version control systems (e.g., Git):
+		systems track changes to source code, allowing developers to collaborate and maintain a history of alterations.
+
+	Branching and merging strategies: you are combining diferentes deelopment 
+		creating separate lines of development, or "branches," to work on specific features or fixes independently
+		Merging is combining changes from one branch into another, often used when a feature is ready to be integrated into the main codebase.
+
+	Maintenance phases:
+		Corrective Maintenance: This phase involves fixing bugs and issues that surface after deployment
+			if users report software crashes, corrective maintenance aims to resolve those issues promptly.
+		
+		Adaptive Maintenance: adapting the software to changing environments or requirements
+		
+		Perfective Maintenance: focuses on enhancing the software's performance, efficiency, or user experience. 
+		
+		Preventive Maintenance: identify and address potential issues before they become problems.
+
+	End-of-life considerations for software applications:
+		finite lifespan, and planning for their end-of-life is essential to avoid disruptions and security risks
+		Microsoft discontinuing support for older versions
+
+Security in SDLC
+	Importance of Security in SDLC (Software Development Life Cycle):
+		should be integrated from the beginning to protect against threats
+		security can lead to data breaches, financial losses, and damage to reputation
+
+	Security Testing:
+		Penetration Testing: Ethical hackers attempt to exploit vulnerabilities
+		
+		Vulnerability Scanning: Automated tools identify weaknesses.
+
+		Code Review: Manual examination of code for security issues
+
+	Secure Coding Practices:
+		Input Validation: Check and sanitize user inputs to prevent SQL injection or cross-site scripting (rules for validation)
+
+		Authentication and Authorization: Ensure only authorized users can access certain functions
+
+		Encryption: Protect sensitive data by encrypting it
+
+		Error Handling: Avoid revealing sensitive information in error messages
+
+		Secure Coding Practices: 
+				validation is like scanning items before they enter
+				authentication is like verifying the identity of those who can access it
+				encryption is like putting items in a locked 
+				and error handling is like ensuring that 
+			
+			
+
+
+		
+
+
+	
+		
+		
+
+		
+			
+
+			
+
+			
+
+
+		
+
+
+			
+
+
+
+			
+	
+
+
+
+
+	

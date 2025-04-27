@@ -1,5 +1,5 @@
 /**
- * Main JavaScript for SmartQuiz with AI
+ * Main JavaScript for Smart Fill-in-the-Blanks with AI
  */
 
 // Add smooth scrolling to all links

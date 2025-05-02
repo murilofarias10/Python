@@ -9,6 +9,9 @@ azure-ai-inference
 openai-agents
 rich
 graphviz
+groq
+pydantic_ai
+semantic-kernel
 
 
 

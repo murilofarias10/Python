@@ -55,7 +55,7 @@ async def run_agents():
         termination_condition=termination,
         model_client=client,
     )
-    await Console(group_chat.run_stream(task="Plan a 3 day trip to Egypt"))
+    await Console(group_chat.run_stream(task="Plan a 3 day trip to Ecuador"))
 
 
 if __name__ == "__main__":

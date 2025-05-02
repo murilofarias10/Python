@@ -26,7 +26,7 @@ elif API_HOST == "azure":
 
 agent: Agent[None, str] = Agent(
     model,
-    system_prompt="You are a Spanish tutor. Help the user learn Spanish. ONLY respond in Spanish.",
+    system_prompt="You are a Germany tutor. Help the user learn Germany. ONLY respond in Germany.",
     result_type=str,
 )
 

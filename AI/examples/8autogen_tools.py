@@ -30,6 +30,7 @@ elif API_HOST == "azure":
 
 
 def get_weather(city: str) -> str:
+    """Get the weather for a given city."""
     logger.info(f"Getting weather for {city}")
     if random.random() < 0.05:
         return {
@@ -67,10 +68,11 @@ agent = AssistantAgent(
 )
 
 
+#this one is to have a more complex conversation with the agent
 async def main() -> None:
     team = RoundRobinGroupChat([agent], termination_condition=TextMessageTermination(agent.name))
 
-    async for task_result in team.run_stream(task="what can I do for funzies this weekend in Seattle?"):
+    async for task_result in team.run_stream(task="what can I one city in France tomorrow ?"):
         logger.debug("%s: %s", type(task_result).__name__, task_result)
     print(task_result.messages[-1].content)
 

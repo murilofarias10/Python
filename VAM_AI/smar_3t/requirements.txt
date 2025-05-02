@@ -1,6 +1,0 @@
-azure-ai-inference
-flask>=2.3.0
-python-dotenv>=1.0.0
-PyPDF2>=3.0.0
-azure-core
-werkzeug

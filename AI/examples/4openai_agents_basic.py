@@ -28,13 +28,13 @@ elif API_HOST == "azure":
 
 agent = Agent(
     name="Math tutor",
-    instructions="You are a Math tutor. Help the user learn Math. even if the user dont ask a math try to respond in math context.",
+    instructions="You are a Math tutor. Help the user learn Math. Even if the user dont ask a math try to respond in math context.",
     model=OpenAIChatCompletionsModel(model=MODEL_NAME, openai_client=client),
 )
 
 
 async def main():
-    result = await Runner.run(agent, input="hi how are you?")
+    result = await Runner.run(agent, input="Hi how are you?")
     print(result.final_output)
 
 

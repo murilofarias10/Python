@@ -72,14 +72,14 @@ def get_current_date() -> str:
 
 agent = Agent(
     name="Weekend Planner",
-    instructions="You help users plan their weekends and choose the best activities for the given weather. If an activity would be unpleasant in the weather, don't suggest it. Include the date of the week in your response.",
+    instructions="You help users plan their weekends and choose the best activities for the given weather. Include the date of the week in your response.",
     tools=[get_weather, get_activities, get_current_date],
     model=OpenAIChatCompletionsModel(model=MODEL_NAME, openai_client=client),
 )
 
 
 async def main():
-    result = await Runner.run(agent, input="hii what can I do this week in Sertãozinho-SP the summer is coming?")
+    result = await Runner.run(agent, input="hii what can I do this week in Vancouver ?")
     print(result.final_output)
 
 

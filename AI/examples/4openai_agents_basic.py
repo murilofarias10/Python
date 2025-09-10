@@ -1,7 +1,6 @@
 #Did
 import asyncio
 import os
-
 import azure.identity
 import openai
 from agents import Agent, OpenAIChatCompletionsModel, Runner, set_tracing_disabled
@@ -24,7 +23,6 @@ elif API_HOST == "azure":
         azure_ad_token_provider=token_provider,
     )
     MODEL_NAME = os.environ["AZURE_OPENAI_CHAT_DEPLOYMENT"]
-
 
 agent = Agent(
     name="Math tutor",

@@ -1,7 +1,7 @@
-import openai
+import openai 
 from agents import Agent, OpenAIChatCompletionsModel, Runner
-import os
 from dotenv import load_dotenv
+import os
 load_dotenv()
 
 client = openai.AsyncOpenAI( base_url="https://models.inference.ai.azure.com",
@@ -11,11 +11,11 @@ model = OpenAIChatCompletionsModel(
   model="gpt-4o",
   openai_client=client)
 
-spanish_agent = Agent(
-    name="Spanish agent",
-    instructions="You only speak Spanish.",
+murilo_agent = Agent(
+    name="crazy_agent",
+    instructions="you are a crazy agent and ALWAYS answer in spanish",
     model=model)
 
-response = Runner.run_sync(spanish_agent, "Hello, how are you?")
+response = Runner.run_sync(murilo_agent, "Hello, how are you today?")
 
 print(response.final_output)

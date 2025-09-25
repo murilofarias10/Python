@@ -3,7 +3,7 @@ from agents import Agent, OpenAIChatCompletionsModel, Runner
 from dotenv import load_dotenv
 import os
 load_dotenv()
-
+#
 client = openai.AsyncOpenAI( base_url="https://models.inference.ai.azure.com",
     api_key=os.environ["GITHUB_TOKEN"])
 

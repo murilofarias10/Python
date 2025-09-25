@@ -7,6 +7,7 @@ import openpyxl
 import requests
 import json
 
+
 # Caminho para o arquivo Excel original e para o novo arquivo
 caminho_arquivo_original = r'C:\Users\MuriloFarias\Desktop\Dados\Teste.xlsx'
 novo_nome_arquivo = caminho_arquivo_original.replace('Teste.xlsx', 'resultado_atualizado.xlsx')

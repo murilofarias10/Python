@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Project specific
+data_with_clusters.csv
+cluster_characterization.csv
+californiahousing.csv
+pca_loadings_sorted_PC1.csv
+pca_loadings_unsorted.csv
+
+# Environment
+.env
+.venv
+venv/
+ENV/
+
+# System
+.DS_Store
+Thumbs.db

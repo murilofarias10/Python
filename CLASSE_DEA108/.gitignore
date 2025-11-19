@@ -29,13 +29,7 @@ wheels/
 .vscode/
 *.code-workspace
 
-# Project specific
-data_with_clusters.csv
-cluster_characterization.csv
-californiahousing.csv
-pca_loadings_sorted_PC1.csv
-pca_loadings_unsorted.csv
-iris.csv
+
 
 # Environment
 .env

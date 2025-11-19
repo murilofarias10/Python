@@ -1,0 +1,3408 @@
+[
+  {
+    "station_id": "0258",
+    "name": "13th & St George",
+    "location": [
+      49.258817,
+      -123.092797
+    ],
+    "capacity": 16,
+    "num_bikes_available": 7,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0074",
+    "name": "10th & Main",
+    "location": [
+      49.262141,
+      -123.101961
+    ],
+    "capacity": 18,
+    "num_bikes_available": 6,
+    "num_docks_available": 12,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0166",
+    "name": "Alder & 11th",
+    "location": [
+      49.261742,
+      -123.13148
+    ],
+    "capacity": 14,
+    "num_bikes_available": 3,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0281",
+    "name": "Windsor & 14th",
+    "location": [
+      49.257985,
+      -123.083366
+    ],
+    "capacity": 14,
+    "num_bikes_available": 3,
+    "num_docks_available": 11,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2143",
+    "name": "War Memorial Gym",
+    "location": [
+      49.266579,
+      -123.248549
+    ],
+    "capacity": 28,
+    "num_bikes_available": 10,
+    "num_docks_available": 18,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0246",
+    "name": "Glen & Broadway",
+    "location": [
+      49.262242,
+      -123.081459
+    ],
+    "capacity": 18,
+    "num_bikes_available": 7,
+    "num_docks_available": 11,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0099",
+    "name": "šxʷƛ̓ənəq Xwtl'e7énḵ Square - Vancouver Art Gallery",
+    "location": [
+      49.283227,
+      -123.120523
+    ],
+    "capacity": 28,
+    "num_bikes_available": 9,
+    "num_docks_available": 17,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0138",
+    "name": "Richards & Helmcken",
+    "location": [
+      49.277141,
+      -123.122589
+    ],
+    "capacity": 18,
+    "num_bikes_available": 2,
+    "num_docks_available": 15,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0611",
+    "name": "Wall & Eton",
+    "location": [
+      49.287464,
+      -123.060771
+    ],
+    "capacity": 18,
+    "num_bikes_available": 8,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0222",
+    "name": "Adanac & McLean",
+    "location": [
+      49.277665,
+      -123.073653
+    ],
+    "capacity": 23,
+    "num_bikes_available": 5,
+    "num_docks_available": 18,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0354",
+    "name": "Station & Terminal",
+    "location": [
+      49.272172,
+      -123.097978
+    ],
+    "capacity": 18,
+    "num_bikes_available": 11,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0257",
+    "name": "Prince Edward & 14th",
+    "location": [
+      49.258352,
+      -123.096337
+    ],
+    "capacity": 14,
+    "num_bikes_available": 2,
+    "num_docks_available": 12,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0516",
+    "name": "Heather & 29th",
+    "location": [
+      49.245535,
+      -123.120496
+    ],
+    "capacity": 22,
+    "num_bikes_available": 8,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0228",
+    "name": "Keefer & Hawks",
+    "location": [
+      49.279235,
+      -123.087528
+    ],
+    "capacity": 16,
+    "num_bikes_available": 3,
+    "num_docks_available": 13,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0144",
+    "name": "Wylie & 2nd",
+    "location": [
+      49.267725,
+      -123.11311
+    ],
+    "capacity": 18,
+    "num_bikes_available": 5,
+    "num_docks_available": 13,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0027",
+    "name": "Beatty & Nelson",
+    "location": [
+      49.275679,
+      -123.116963
+    ],
+    "capacity": 14,
+    "num_bikes_available": 12,
+    "num_docks_available": 1,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0035",
+    "name": "Hastings & Broughton",
+    "location": [
+      49.290112,
+      -123.127062
+    ],
+    "capacity": 24,
+    "num_bikes_available": 18,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0227",
+    "name": "Campbell & Hastings",
+    "location": [
+      49.280852,
+      -123.084746
+    ],
+    "capacity": 14,
+    "num_bikes_available": 8,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0070",
+    "name": "10th & Granville",
+    "location": [
+      49.262598,
+      -123.138921
+    ],
+    "capacity": 14,
+    "num_bikes_available": 0,
+    "num_docks_available": 14,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2142",
+    "name": "qəlɬaləməcən leləm | Orca House",
+    "location": [
+      49.26875,
+      -123.25004
+    ],
+    "capacity": 22,
+    "num_bikes_available": 10,
+    "num_docks_available": 12,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0242",
+    "name": "8th & Commercial",
+    "location": [
+      49.263242,
+      -123.070521
+    ],
+    "capacity": 20,
+    "num_bikes_available": 5,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0008",
+    "name": "8th & Ash",
+    "location": [
+      49.264215,
+      -123.117772
+    ],
+    "capacity": 16,
+    "num_bikes_available": 14,
+    "num_docks_available": 1,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0044",
+    "name": "Pacific & Richards",
+    "location": [
+      49.273663,
+      -123.127075
+    ],
+    "capacity": 14,
+    "num_bikes_available": 9,
+    "num_docks_available": 5,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0274",
+    "name": "Victoria & 10th",
+    "location": [
+      49.261188,
+      -123.066009
+    ],
+    "capacity": 12,
+    "num_bikes_available": 4,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0482",
+    "name": "East Blvd & 37th",
+    "location": [
+      49.238105,
+      -123.154966
+    ],
+    "capacity": 20,
+    "num_bikes_available": 6,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0119",
+    "name": "Quebec & 3rd",
+    "location": [
+      49.26853,
+      -123.10266
+    ],
+    "capacity": 20,
+    "num_bikes_available": 9,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0205",
+    "name": "Pine & 10th",
+    "location": [
+      49.262822,
+      -123.14338
+    ],
+    "capacity": 20,
+    "num_bikes_available": 1,
+    "num_docks_available": 19,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0088",
+    "name": "Harwood & Bute",
+    "location": [
+      49.28026,
+      -123.135244
+    ],
+    "capacity": 20,
+    "num_bikes_available": 4,
+    "num_docks_available": 16,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2157",
+    "name": "Thunderbird Parkade",
+    "location": [
+      49.261655,
+      -123.241924
+    ],
+    "capacity": 18,
+    "num_bikes_available": 3,
+    "num_docks_available": 15,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0232",
+    "name": "Britannia Parking Lot",
+    "location": [
+      49.275882,
+      -123.071865
+    ],
+    "capacity": 14,
+    "num_bikes_available": 6,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0319",
+    "name": "Pacific & Rolston",
+    "location": [
+      49.2749,
+      -123.12898
+    ],
+    "capacity": 20,
+    "num_bikes_available": 3,
+    "num_docks_available": 17,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0211",
+    "name": "14th & Alder",
+    "location": [
+      49.258819,
+      -123.131317
+    ],
+    "capacity": 14,
+    "num_bikes_available": 6,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0077",
+    "name": "Vanier Park",
+    "location": [
+      49.275717,
+      -123.142564
+    ],
+    "capacity": 28,
+    "num_bikes_available": 17,
+    "num_docks_available": 11,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0318",
+    "name": "Granville & Neon",
+    "location": [
+      49.27549,
+      -123.12882
+    ],
+    "capacity": 20,
+    "num_bikes_available": 0,
+    "num_docks_available": 19,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0007",
+    "name": "12th & Yukon (City Hall)",
+    "location": [
+      49.260599,
+      -123.113504
+    ],
+    "capacity": 12,
+    "num_bikes_available": 11,
+    "num_docks_available": 1,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0431",
+    "name": "Blenheim & 4th",
+    "location": [
+      49.268837,
+      -123.177633
+    ],
+    "capacity": 23,
+    "num_bikes_available": 9,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2154",
+    "name": "Strangway Building",
+    "location": [
+      49.2661,
+      -123.24568
+    ],
+    "capacity": 16,
+    "num_bikes_available": 0,
+    "num_docks_available": 16,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0014",
+    "name": "Canada Place",
+    "location": [
+      49.28725,
+      -123.11298
+    ],
+    "capacity": 26,
+    "num_bikes_available": 19,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0079",
+    "name": "Nelson & Richards",
+    "location": [
+      49.277844,
+      -123.120942
+    ],
+    "capacity": 18,
+    "num_bikes_available": 1,
+    "num_docks_available": 16,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0040",
+    "name": "Cardero & Davie",
+    "location": [
+      49.285512,
+      -123.1384
+    ],
+    "capacity": 18,
+    "num_bikes_available": 8,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0034",
+    "name": "Cordova & Bute",
+    "location": [
+      49.289124,
+      -123.12196
+    ],
+    "capacity": 14,
+    "num_bikes_available": 3,
+    "num_docks_available": 11,
+    "status": "moderate",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0055",
+    "name": "Keefer & Columbia",
+    "location": [
+      49.279342,
+      -123.101822
+    ],
+    "capacity": 14,
+    "num_bikes_available": 9,
+    "num_docks_available": 5,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2156",
+    "name": "Pharmaceutical Sciences",
+    "location": [
+      49.26262,
+      -123.2431
+    ],
+    "capacity": 24,
+    "num_bikes_available": 6,
+    "num_docks_available": 18,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0249",
+    "name": "7th & Woodland",
+    "location": [
+      49.264251,
+      -123.073853
+    ],
+    "capacity": 12,
+    "num_bikes_available": 4,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0130",
+    "name": "Heather & 16th",
+    "location": [
+      49.256845,
+      -123.120071
+    ],
+    "capacity": 12,
+    "num_bikes_available": 2,
+    "num_docks_available": 10,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0072",
+    "name": "14th & Cambie",
+    "location": [
+      49.258763,
+      -123.115392
+    ],
+    "capacity": 14,
+    "num_bikes_available": 4,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0266",
+    "name": "St Catherines & 7th",
+    "location": [
+      49.264466,
+      -123.085183
+    ],
+    "capacity": 20,
+    "num_bikes_available": 6,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0253",
+    "name": "Charles & Woodland",
+    "location": [
+      49.2731,
+      -123.0732
+    ],
+    "capacity": 14,
+    "num_bikes_available": 9,
+    "num_docks_available": 5,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0096",
+    "name": "Nicola & Robson",
+    "location": [
+      49.288506,
+      -123.131238
+    ],
+    "capacity": 18,
+    "num_bikes_available": 12,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "critical"
+  },
+  {
+    "station_id": "0153",
+    "name": "Arbutus Greenway & Fir",
+    "location": [
+      49.266774,
+      -123.141135
+    ],
+    "capacity": 16,
+    "num_bikes_available": 10,
+    "num_docks_available": 4,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0155",
+    "name": "McNicoll & Arbutus",
+    "location": [
+      49.276292,
+      -123.150592
+    ],
+    "capacity": 30,
+    "num_bikes_available": 16,
+    "num_docks_available": 14,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0250",
+    "name": "Woodland & 4th",
+    "location": [
+      49.266751,
+      -123.073501
+    ],
+    "capacity": 14,
+    "num_bikes_available": 4,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0460",
+    "name": "Trafalgar & Cornwall",
+    "location": [
+      49.272969,
+      -123.164325
+    ],
+    "capacity": 20,
+    "num_bikes_available": 10,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0015",
+    "name": "Granville & Georgia",
+    "location": [
+      49.282409,
+      -123.118541
+    ],
+    "capacity": 20,
+    "num_bikes_available": 2,
+    "num_docks_available": 18,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0262",
+    "name": "8th & Prince Edward",
+    "location": [
+      49.263518,
+      -123.09568
+    ],
+    "capacity": 18,
+    "num_bikes_available": 7,
+    "num_docks_available": 11,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0314",
+    "name": "Rolston & Granville",
+    "location": [
+      49.274232,
+      -123.129998
+    ],
+    "capacity": 22,
+    "num_bikes_available": 22,
+    "num_docks_available": 0,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0241",
+    "name": "4th & Commercial",
+    "location": [
+      49.266969,
+      -123.069936
+    ],
+    "capacity": 14,
+    "num_bikes_available": 6,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2134",
+    "name": "UBC Bookstore",
+    "location": [
+      49.265207,
+      -123.250139
+    ],
+    "capacity": 12,
+    "num_bikes_available": 4,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0282",
+    "name": "14th & Fraser",
+    "location": [
+      49.257939,
+      -123.089531
+    ],
+    "capacity": 16,
+    "num_bikes_available": 1,
+    "num_docks_available": 15,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0256",
+    "name": "Prince Edward & 16th",
+    "location": [
+      49.256694,
+      -123.096579
+    ],
+    "capacity": 14,
+    "num_bikes_available": 6,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0165",
+    "name": "Columbia & 5th",
+    "location": [
+      49.266476,
+      -123.109389
+    ],
+    "capacity": 18,
+    "num_bikes_available": 11,
+    "num_docks_available": 5,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0113",
+    "name": "Arbutus & 16th",
+    "location": [
+      49.257654,
+      -123.153212
+    ],
+    "capacity": 40,
+    "num_bikes_available": 3,
+    "num_docks_available": 36,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0561",
+    "name": "20th & Main",
+    "location": [
+      49.252691,
+      -123.101289
+    ],
+    "capacity": 16,
+    "num_bikes_available": 4,
+    "num_docks_available": 12,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0026",
+    "name": "Robson & Beatty",
+    "location": [
+      49.278095,
+      -123.114685
+    ],
+    "capacity": 20,
+    "num_bikes_available": 0,
+    "num_docks_available": 20,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0285",
+    "name": "Commercial & Pandora",
+    "location": [
+      49.283236,
+      -123.070443
+    ],
+    "capacity": 16,
+    "num_bikes_available": 8,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0207",
+    "name": "Alberni & Jervis",
+    "location": [
+      49.28763,
+      -123.127245
+    ],
+    "capacity": 20,
+    "num_bikes_available": 4,
+    "num_docks_available": 16,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0075",
+    "name": "Arbutus & 10th",
+    "location": [
+      49.262835,
+      -123.152626
+    ],
+    "capacity": 18,
+    "num_bikes_available": 1,
+    "num_docks_available": 17,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0106",
+    "name": "Heather & 14th",
+    "location": [
+      49.259183,
+      -123.120126
+    ],
+    "capacity": 16,
+    "num_bikes_available": 4,
+    "num_docks_available": 12,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0197",
+    "name": "1st & Scotia",
+    "location": [
+      49.268503,
+      -123.097501
+    ],
+    "capacity": 20,
+    "num_bikes_available": 13,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0189",
+    "name": "Granville Island",
+    "location": [
+      49.27029,
+      -123.135025
+    ],
+    "capacity": 32,
+    "num_bikes_available": 20,
+    "num_docks_available": 12,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0311",
+    "name": "13th & Cambie",
+    "location": [
+      49.259579,
+      -123.114769
+    ],
+    "capacity": 14,
+    "num_bikes_available": 4,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0278",
+    "name": "15th & Victoria (Trout Lake)",
+    "location": [
+      49.256857,
+      -123.065646
+    ],
+    "capacity": 18,
+    "num_bikes_available": 0,
+    "num_docks_available": 17,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0176",
+    "name": "10th & Ontario",
+    "location": [
+      49.262062,
+      -123.104656
+    ],
+    "capacity": 20,
+    "num_bikes_available": 4,
+    "num_docks_available": 15,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0087",
+    "name": "Broughton & Davie",
+    "location": [
+      49.283749,
+      -123.136133
+    ],
+    "capacity": 22,
+    "num_bikes_available": 9,
+    "num_docks_available": 13,
+    "status": "moderate",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0098",
+    "name": "Carrall & Hastings",
+    "location": [
+      49.28117,
+      -123.104419
+    ],
+    "capacity": 18,
+    "num_bikes_available": 18,
+    "num_docks_available": 0,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0265",
+    "name": "St Catherines & 10th",
+    "location": [
+      49.261353,
+      -123.085333
+    ],
+    "capacity": 12,
+    "num_bikes_available": 0,
+    "num_docks_available": 12,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2132",
+    "name": "IK Barber Learning Centre",
+    "location": [
+      49.267561,
+      -123.252261
+    ],
+    "capacity": 20,
+    "num_bikes_available": 14,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0045",
+    "name": "Beach & Hornby",
+    "location": [
+      49.27551,
+      -123.13307
+    ],
+    "capacity": 22,
+    "num_bikes_available": 16,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0511",
+    "name": "Heather & 18th",
+    "location": [
+      49.255034,
+      -123.120226
+    ],
+    "capacity": 16,
+    "num_bikes_available": 8,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0305",
+    "name": "Georgia & Homer",
+    "location": [
+      49.280787,
+      -123.115271
+    ],
+    "capacity": 18,
+    "num_bikes_available": 7,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0028",
+    "name": "Davie & Beach",
+    "location": [
+      49.287528,
+      -123.142139
+    ],
+    "capacity": 0,
+    "num_bikes_available": 0,
+    "num_docks_available": 0,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0004",
+    "name": "Yaletown-Roundhouse Station",
+    "location": [
+      49.274566,
+      -123.121817
+    ],
+    "capacity": 16,
+    "num_bikes_available": 14,
+    "num_docks_available": 2,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0152",
+    "name": "Arbutus Greenway & 14th",
+    "location": [
+      49.258924,
+      -123.152591
+    ],
+    "capacity": 20,
+    "num_bikes_available": 6,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0554",
+    "name": "Ontario & 23rd",
+    "location": [
+      49.249722,
+      -123.104991
+    ],
+    "capacity": 12,
+    "num_bikes_available": 4,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0082",
+    "name": "Richards & Davie",
+    "location": [
+      49.275683,
+      -123.124388
+    ],
+    "capacity": 14,
+    "num_bikes_available": 6,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0240",
+    "name": "2nd & Commercial",
+    "location": [
+      49.268616,
+      -123.069908
+    ],
+    "capacity": 22,
+    "num_bikes_available": 4,
+    "num_docks_available": 18,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0076",
+    "name": "Cypress & 4th",
+    "location": [
+      49.268269,
+      -123.147885
+    ],
+    "capacity": 18,
+    "num_bikes_available": 3,
+    "num_docks_available": 14,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0400",
+    "name": "Jericho Beach",
+    "location": [
+      49.271221,
+      -123.191133
+    ],
+    "capacity": 26,
+    "num_bikes_available": 9,
+    "num_docks_available": 15,
+    "status": "moderate",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0215",
+    "name": "Princess & Union",
+    "location": [
+      49.277615,
+      -123.091654
+    ],
+    "capacity": 12,
+    "num_bikes_available": 2,
+    "num_docks_available": 10,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0150",
+    "name": "Alexander & Main",
+    "location": [
+      49.284157,
+      -123.099917
+    ],
+    "capacity": 20,
+    "num_bikes_available": 1,
+    "num_docks_available": 19,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0464",
+    "name": "Trafalgar & Broadway",
+    "location": [
+      49.264326,
+      -123.164725
+    ],
+    "capacity": 16,
+    "num_bikes_available": 5,
+    "num_docks_available": 11,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2167",
+    "name": "Acadia Park",
+    "location": [
+      49.26278,
+      -123.23712
+    ],
+    "capacity": 20,
+    "num_bikes_available": 3,
+    "num_docks_available": 17,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0002",
+    "name": "Burrard Station (Melville & Dunsmuir)",
+    "location": [
+      49.285871,
+      -123.12105
+    ],
+    "capacity": 28,
+    "num_bikes_available": 21,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0565",
+    "name": "27th & Main",
+    "location": [
+      49.247204,
+      -123.101549
+    ],
+    "capacity": 22,
+    "num_bikes_available": 0,
+    "num_docks_available": 22,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0137",
+    "name": "Beach & Seymour",
+    "location": [
+      49.273568,
+      -123.129935
+    ],
+    "capacity": 18,
+    "num_bikes_available": 8,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0557",
+    "name": "30th & Ontario",
+    "location": [
+      49.243375,
+      -123.104978
+    ],
+    "capacity": 22,
+    "num_bikes_available": 5,
+    "num_docks_available": 17,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0001",
+    "name": "10th & Cambie",
+    "location": [
+      49.262487,
+      -123.114397
+    ],
+    "capacity": 35,
+    "num_bikes_available": 26,
+    "num_docks_available": 9,
+    "status": "optimal",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0443",
+    "name": "Balaclava & 6th",
+    "location": [
+      49.266924,
+      -123.173849
+    ],
+    "capacity": 16,
+    "num_bikes_available": 3,
+    "num_docks_available": 13,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0171",
+    "name": "Yukon & 6th",
+    "location": [
+      49.265939,
+      -123.1129
+    ],
+    "capacity": 18,
+    "num_bikes_available": 12,
+    "num_docks_available": 5,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2114",
+    "name": "West Mall Swing Space Building",
+    "location": [
+      49.263073,
+      -123.254307
+    ],
+    "capacity": 20,
+    "num_bikes_available": 5,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0063",
+    "name": "Robson & Granville",
+    "location": [
+      49.281506,
+      -123.120101
+    ],
+    "capacity": 24,
+    "num_bikes_available": 9,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0715",
+    "name": "Trimble & 8th",
+    "location": [
+      49.2658,
+      -123.20596
+    ],
+    "capacity": 20,
+    "num_bikes_available": 13,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0089",
+    "name": "Burrard & Drake",
+    "location": [
+      49.27808,
+      -123.130557
+    ],
+    "capacity": 24,
+    "num_bikes_available": 2,
+    "num_docks_available": 22,
+    "status": "low",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0013",
+    "name": "Maple Tree Square",
+    "location": [
+      49.283482,
+      -123.103738
+    ],
+    "capacity": 25,
+    "num_bikes_available": 7,
+    "num_docks_available": 17,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0109",
+    "name": "7th & Arbutus",
+    "location": [
+      49.265605,
+      -123.152566
+    ],
+    "capacity": 16,
+    "num_bikes_available": 4,
+    "num_docks_available": 12,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0054",
+    "name": "Expo & Carrall",
+    "location": [
+      49.278004,
+      -123.105664
+    ],
+    "capacity": 16,
+    "num_bikes_available": 8,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0248",
+    "name": "St George & Broadway",
+    "location": [
+      49.262321,
+      -123.09306
+    ],
+    "capacity": 14,
+    "num_bikes_available": 1,
+    "num_docks_available": 13,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0310",
+    "name": "Jervis & Robson",
+    "location": [
+      49.286646,
+      -123.129232
+    ],
+    "capacity": 20,
+    "num_bikes_available": 2,
+    "num_docks_available": 16,
+    "status": "low",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0039",
+    "name": "Helmcken & Burrard",
+    "location": [
+      49.279938,
+      -123.127478
+    ],
+    "capacity": 16,
+    "num_bikes_available": 0,
+    "num_docks_available": 16,
+    "status": "low",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0147",
+    "name": "Chestnut & McNicoll",
+    "location": [
+      49.275938,
+      -123.145939
+    ],
+    "capacity": 16,
+    "num_bikes_available": 7,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0531",
+    "name": "18th & Cambie",
+    "location": [
+      49.254818,
+      -123.114785
+    ],
+    "capacity": 24,
+    "num_bikes_available": 1,
+    "num_docks_available": 23,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0221",
+    "name": "Glen & Union",
+    "location": [
+      49.277469,
+      -123.081315
+    ],
+    "capacity": 14,
+    "num_bikes_available": 5,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0078",
+    "name": "Nelson & Mainland",
+    "location": [
+      49.276436,
+      -123.11877
+    ],
+    "capacity": 20,
+    "num_bikes_available": 17,
+    "num_docks_available": 2,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0134",
+    "name": "14th & Main",
+    "location": [
+      49.258429,
+      -123.101766
+    ],
+    "capacity": 18,
+    "num_bikes_available": 0,
+    "num_docks_available": 18,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0239",
+    "name": "Grant & Commercial",
+    "location": [
+      49.271377,
+      -123.069416
+    ],
+    "capacity": 14,
+    "num_bikes_available": 6,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0315",
+    "name": "1st & Fir",
+    "location": [
+      49.270783,
+      -123.141564
+    ],
+    "capacity": 18,
+    "num_bikes_available": 0,
+    "num_docks_available": 18,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0121",
+    "name": "Heather & 10th",
+    "location": [
+      49.26213,
+      -123.11989
+    ],
+    "capacity": 22,
+    "num_bikes_available": 7,
+    "num_docks_available": 15,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2127",
+    "name": "Thunderbird & Thunderbird",
+    "location": [
+      49.25976,
+      -123.2479
+    ],
+    "capacity": 20,
+    "num_bikes_available": 3,
+    "num_docks_available": 17,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0173",
+    "name": "Columbia & 1st",
+    "location": [
+      49.269969,
+      -123.109623
+    ],
+    "capacity": 24,
+    "num_bikes_available": 20,
+    "num_docks_available": 4,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2136",
+    "name": "Agronomy & East Mall",
+    "location": [
+      49.261736,
+      -123.24648
+    ],
+    "capacity": 18,
+    "num_bikes_available": 1,
+    "num_docks_available": 17,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0642",
+    "name": "Franklin & Nanaimo",
+    "location": [
+      49.282087,
+      -123.056909
+    ],
+    "capacity": 20,
+    "num_bikes_available": 5,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0019",
+    "name": "Robson & Hornby",
+    "location": [
+      49.282758,
+      -123.122092
+    ],
+    "capacity": 21,
+    "num_bikes_available": 1,
+    "num_docks_available": 18,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0140",
+    "name": "Burrard & 7th",
+    "location": [
+      49.265336,
+      -123.145823
+    ],
+    "capacity": 16,
+    "num_bikes_available": 3,
+    "num_docks_available": 13,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0198",
+    "name": "5th & Main",
+    "location": [
+      49.266456,
+      -123.100324
+    ],
+    "capacity": 20,
+    "num_bikes_available": 3,
+    "num_docks_available": 17,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2252",
+    "name": "Wesbrook Village - Berton & Shrum",
+    "location": [
+      49.25478,
+      -123.23621
+    ],
+    "capacity": 28,
+    "num_bikes_available": 19,
+    "num_docks_available": 8,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0092",
+    "name": "Chilco & Barclay",
+    "location": [
+      49.291909,
+      -123.140713
+    ],
+    "capacity": 18,
+    "num_bikes_available": 6,
+    "num_docks_available": 12,
+    "status": "moderate",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0032",
+    "name": "Comox & Denman",
+    "location": [
+      49.288444,
+      -123.139203
+    ],
+    "capacity": 18,
+    "num_bikes_available": 16,
+    "num_docks_available": 2,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0229",
+    "name": "Keefer & Princess",
+    "location": [
+      49.279369,
+      -123.091241
+    ],
+    "capacity": 14,
+    "num_bikes_available": 1,
+    "num_docks_available": 13,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0139",
+    "name": "Burrard & 4th",
+    "location": [
+      49.267859,
+      -123.145782
+    ],
+    "capacity": 16,
+    "num_bikes_available": 9,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2112",
+    "name": "Place Vanier",
+    "location": [
+      49.26518,
+      -123.25868
+    ],
+    "capacity": 16,
+    "num_bikes_available": 1,
+    "num_docks_available": 15,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0174",
+    "name": "1st & Manitoba",
+    "location": [
+      49.27023,
+      -123.10651
+    ],
+    "capacity": 28,
+    "num_bikes_available": 16,
+    "num_docks_available": 9,
+    "status": "optimal",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0631",
+    "name": "Lakewood & Triumph",
+    "location": [
+      49.283968,
+      -123.061615
+    ],
+    "capacity": 16,
+    "num_bikes_available": 9,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0133",
+    "name": "Ontario & 16th",
+    "location": [
+      49.256825,
+      -123.105234
+    ],
+    "capacity": 14,
+    "num_bikes_available": 1,
+    "num_docks_available": 13,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0470",
+    "name": "Balsam & Cornwall",
+    "location": [
+      49.273011,
+      -123.159663
+    ],
+    "capacity": 18,
+    "num_bikes_available": 10,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0024",
+    "name": "Hornby & Pender",
+    "location": [
+      49.28602,
+      -123.116624
+    ],
+    "capacity": 22,
+    "num_bikes_available": 13,
+    "num_docks_available": 9,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0617",
+    "name": "Adanac & Lakewood",
+    "location": [
+      49.27751,
+      -123.061429
+    ],
+    "capacity": 20,
+    "num_bikes_available": 4,
+    "num_docks_available": 16,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0136",
+    "name": "David Lam Park",
+    "location": [
+      49.270905,
+      -123.126006
+    ],
+    "capacity": 18,
+    "num_bikes_available": 1,
+    "num_docks_available": 17,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0065",
+    "name": "Cypress & Cornwall",
+    "location": [
+      49.272827,
+      -123.147744
+    ],
+    "capacity": 22,
+    "num_bikes_available": 19,
+    "num_docks_available": 2,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0064",
+    "name": "Expo & Smithe",
+    "location": [
+      49.276115,
+      -123.114496
+    ],
+    "capacity": 14,
+    "num_bikes_available": 13,
+    "num_docks_available": 1,
+    "status": "optimal",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0021",
+    "name": "Cordova & Granville",
+    "location": [
+      49.28567,
+      -123.112543
+    ],
+    "capacity": 18,
+    "num_bikes_available": 15,
+    "num_docks_available": 3,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0563",
+    "name": "22nd & Main",
+    "location": [
+      49.25094,
+      -123.101306
+    ],
+    "capacity": 14,
+    "num_bikes_available": 0,
+    "num_docks_available": 14,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0190",
+    "name": "Melville & Bute",
+    "location": [
+      49.287782,
+      -123.12395
+    ],
+    "capacity": 14,
+    "num_bikes_available": 9,
+    "num_docks_available": 4,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0060",
+    "name": "Bidwell & Burnaby",
+    "location": [
+      49.28526,
+      -123.141809
+    ],
+    "capacity": 26,
+    "num_bikes_available": 8,
+    "num_docks_available": 16,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0192",
+    "name": "7th &  Alder",
+    "location": [
+      49.265198,
+      -123.131043
+    ],
+    "capacity": 16,
+    "num_bikes_available": 4,
+    "num_docks_available": 12,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0154",
+    "name": "Kitsilano Beach Park",
+    "location": [
+      49.273355,
+      -123.154493
+    ],
+    "capacity": 36,
+    "num_bikes_available": 22,
+    "num_docks_available": 14,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0161",
+    "name": "Alexander & Dunlevy",
+    "location": [
+      49.284062,
+      -123.095097
+    ],
+    "capacity": 14,
+    "num_bikes_available": 5,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0209",
+    "name": "Stanley Park - Information Booth",
+    "location": [
+      49.297933,
+      -123.130758
+    ],
+    "capacity": 20,
+    "num_bikes_available": 11,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "critical"
+  },
+  {
+    "station_id": "0255",
+    "name": "18th & Main",
+    "location": [
+      49.254667,
+      -123.101389
+    ],
+    "capacity": 16,
+    "num_bikes_available": 6,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0104",
+    "name": "Stanley Park - Second Beach South",
+    "location": [
+      49.294318,
+      -123.148808
+    ],
+    "capacity": 18,
+    "num_bikes_available": 17,
+    "num_docks_available": 0,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0225",
+    "name": "McLean & Pender",
+    "location": [
+      49.280427,
+      -123.074082
+    ],
+    "capacity": 16,
+    "num_bikes_available": 13,
+    "num_docks_available": 3,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0122",
+    "name": "Haro & Denman",
+    "location": [
+      49.290587,
+      -123.13625
+    ],
+    "capacity": 20,
+    "num_bikes_available": 20,
+    "num_docks_available": 0,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0170",
+    "name": "8th & Yukon",
+    "location": [
+      49.263962,
+      -123.112621
+    ],
+    "capacity": 24,
+    "num_bikes_available": 12,
+    "num_docks_available": 12,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0280",
+    "name": "Triumph & Victoria",
+    "location": [
+      49.283986,
+      -123.065264
+    ],
+    "capacity": 16,
+    "num_bikes_available": 10,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0073",
+    "name": "Ontario & 5th",
+    "location": [
+      49.266724,
+      -123.104824
+    ],
+    "capacity": 20,
+    "num_bikes_available": 13,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0186",
+    "name": "10th & Kingsway",
+    "location": [
+      49.261973,
+      -123.09725
+    ],
+    "capacity": 20,
+    "num_bikes_available": 15,
+    "num_docks_available": 5,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0414",
+    "name": "Dunbar & 6th",
+    "location": [
+      49.266636,
+      -123.183661
+    ],
+    "capacity": 16,
+    "num_bikes_available": 7,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0297",
+    "name": "6th & Prince Edward",
+    "location": [
+      49.265242,
+      -123.095577
+    ],
+    "capacity": 16,
+    "num_bikes_available": 3,
+    "num_docks_available": 13,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0231",
+    "name": "Napier & Commercial",
+    "location": [
+      49.274881,
+      -123.069323
+    ],
+    "capacity": 14,
+    "num_bikes_available": 7,
+    "num_docks_available": 7,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0058",
+    "name": "Richards & Smithe",
+    "location": [
+      49.279259,
+      -123.119145
+    ],
+    "capacity": 18,
+    "num_bikes_available": 13,
+    "num_docks_available": 3,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0230",
+    "name": "Alexander & Railway",
+    "location": [
+      49.283992,
+      -123.091206
+    ],
+    "capacity": 20,
+    "num_bikes_available": 16,
+    "num_docks_available": 3,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0621",
+    "name": "Lakewood & Oxford",
+    "location": [
+      49.285575,
+      -123.061575
+    ],
+    "capacity": 18,
+    "num_bikes_available": 9,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0450",
+    "name": "Point Grey & Bayswater",
+    "location": [
+      49.271044,
+      -123.170661
+    ],
+    "capacity": 16,
+    "num_bikes_available": 6,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0030",
+    "name": "Abbott & Cordova",
+    "location": [
+      49.282759,
+      -123.106955
+    ],
+    "capacity": 22,
+    "num_bikes_available": 18,
+    "num_docks_available": 3,
+    "status": "optimal",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0083",
+    "name": "Aquatic Centre",
+    "location": [
+      49.27821,
+      -123.136972
+    ],
+    "capacity": 40,
+    "num_bikes_available": 16,
+    "num_docks_available": 24,
+    "status": "moderate",
+    "demand_level": "critical"
+  },
+  {
+    "station_id": "0050",
+    "name": "Bute & Comox",
+    "location": [
+      49.283343,
+      -123.131099
+    ],
+    "capacity": 22,
+    "num_bikes_available": 4,
+    "num_docks_available": 18,
+    "status": "low",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0440",
+    "name": "Point Grey & Blenheim",
+    "location": [
+      49.271471,
+      -123.17731
+    ],
+    "capacity": 14,
+    "num_bikes_available": 7,
+    "num_docks_available": 7,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0244",
+    "name": "10th & Commercial",
+    "location": [
+      49.261403,
+      -123.070102
+    ],
+    "capacity": 26,
+    "num_bikes_available": 10,
+    "num_docks_available": 16,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0124",
+    "name": "Richards & Cordova",
+    "location": [
+      49.284554,
+      -123.111031
+    ],
+    "capacity": 14,
+    "num_bikes_available": 11,
+    "num_docks_available": 3,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0283",
+    "name": "15th & Knight",
+    "location": [
+      49.256496,
+      -123.075426
+    ],
+    "capacity": 14,
+    "num_bikes_available": 8,
+    "num_docks_available": 5,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0410",
+    "name": "Alma & Point Grey",
+    "location": [
+      49.27247,
+      -123.185643
+    ],
+    "capacity": 24,
+    "num_bikes_available": 6,
+    "num_docks_available": 18,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0308",
+    "name": "Seymour & Cordova",
+    "location": [
+      49.28512,
+      -123.11242
+    ],
+    "capacity": 19,
+    "num_bikes_available": 16,
+    "num_docks_available": 3,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0179",
+    "name": "11th & Kingsway",
+    "location": [
+      49.261122,
+      -123.097571
+    ],
+    "capacity": 16,
+    "num_bikes_available": 10,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0103",
+    "name": "Stanley Park - Third Beach Parking Lot",
+    "location": [
+      49.302577,
+      -123.155616
+    ],
+    "capacity": 38,
+    "num_bikes_available": 21,
+    "num_docks_available": 17,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0181",
+    "name": "Denman & Bayshore",
+    "location": [
+      49.293264,
+      -123.132861
+    ],
+    "capacity": 22,
+    "num_bikes_available": 13,
+    "num_docks_available": 9,
+    "status": "optimal",
+    "demand_level": "critical"
+  },
+  {
+    "station_id": "0143",
+    "name": "Charleson Park",
+    "location": [
+      49.267628,
+      -123.127698
+    ],
+    "capacity": 14,
+    "num_bikes_available": 6,
+    "num_docks_available": 5,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0148",
+    "name": "Creekside Park North",
+    "location": [
+      49.2756,
+      -123.102661
+    ],
+    "capacity": 18,
+    "num_bikes_available": 8,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0126",
+    "name": "Thurlow & Pendrell",
+    "location": [
+      49.280881,
+      -123.130672
+    ],
+    "capacity": 16,
+    "num_bikes_available": 1,
+    "num_docks_available": 15,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0415",
+    "name": "Dunbar & Broadway",
+    "location": [
+      49.264579,
+      -123.18373
+    ],
+    "capacity": 26,
+    "num_bikes_available": 2,
+    "num_docks_available": 24,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0452",
+    "name": "8th & Macdonald",
+    "location": [
+      49.264928,
+      -123.168068
+    ],
+    "capacity": 20,
+    "num_bikes_available": 11,
+    "num_docks_available": 9,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0213",
+    "name": "Pender & Gore",
+    "location": [
+      49.280284,
+      -123.097052
+    ],
+    "capacity": 14,
+    "num_bikes_available": 2,
+    "num_docks_available": 10,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0105",
+    "name": "Stanley Park - Totem Poles",
+    "location": [
+      49.298657,
+      -123.121176
+    ],
+    "capacity": 20,
+    "num_bikes_available": 5,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "critical"
+  },
+  {
+    "station_id": "0031",
+    "name": "Morton & Denman",
+    "location": [
+      49.28803,
+      -123.142135
+    ],
+    "capacity": 26,
+    "num_bikes_available": 12,
+    "num_docks_available": 13,
+    "status": "moderate",
+    "demand_level": "critical"
+  },
+  {
+    "station_id": "0012",
+    "name": "Dunsmuir & Richards",
+    "location": [
+      49.282214,
+      -123.114101
+    ],
+    "capacity": 22,
+    "num_bikes_available": 3,
+    "num_docks_available": 16,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0252",
+    "name": "Woodland & Graveley",
+    "location": [
+      49.270684,
+      -123.073562
+    ],
+    "capacity": 12,
+    "num_bikes_available": 3,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0505",
+    "name": "28th & Willow",
+    "location": [
+      49.246243,
+      -123.124373
+    ],
+    "capacity": 20,
+    "num_bikes_available": 4,
+    "num_docks_available": 16,
+    "status": "moderate",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0196",
+    "name": "Hornby & Drake",
+    "location": [
+      49.277178,
+      -123.13
+    ],
+    "capacity": 24,
+    "num_bikes_available": 6,
+    "num_docks_available": 18,
+    "status": "moderate",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0245",
+    "name": "Woodland & 10th",
+    "location": [
+      49.261263,
+      -123.073707
+    ],
+    "capacity": 14,
+    "num_bikes_available": 5,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0057",
+    "name": "Marinaside & Cooperage",
+    "location": [
+      49.273833,
+      -123.114373
+    ],
+    "capacity": 27,
+    "num_bikes_available": 20,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0202",
+    "name": "14th & Oak",
+    "location": [
+      49.258761,
+      -123.127071
+    ],
+    "capacity": 14,
+    "num_bikes_available": 7,
+    "num_docks_available": 7,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0025",
+    "name": "Homer & Robson (Vancouver Public Library)",
+    "location": [
+      49.279739,
+      -123.116251
+    ],
+    "capacity": 20,
+    "num_bikes_available": 8,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0110",
+    "name": "5th & Arbutus",
+    "location": [
+      49.267222,
+      -123.153157
+    ],
+    "capacity": 16,
+    "num_bikes_available": 1,
+    "num_docks_available": 15,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0048",
+    "name": "Comox & Broughton",
+    "location": [
+      49.285253,
+      -123.134356
+    ],
+    "capacity": 12,
+    "num_bikes_available": 2,
+    "num_docks_available": 10,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0066",
+    "name": "Anderson & 2nd",
+    "location": [
+      49.269361,
+      -123.13782
+    ],
+    "capacity": 28,
+    "num_bikes_available": 13,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "critical"
+  },
+  {
+    "station_id": "0204",
+    "name": "York & Yew",
+    "location": [
+      49.271741,
+      -123.155421
+    ],
+    "capacity": 20,
+    "num_bikes_available": 9,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0233",
+    "name": "Thornton & National",
+    "location": [
+      49.273777,
+      -123.092723
+    ],
+    "capacity": 14,
+    "num_bikes_available": 8,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0261",
+    "name": "8th & Fraser",
+    "location": [
+      49.263382,
+      -123.088837
+    ],
+    "capacity": 16,
+    "num_bikes_available": 4,
+    "num_docks_available": 12,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0300",
+    "name": "Bute & Barclay",
+    "location": [
+      49.284893,
+      -123.128685
+    ],
+    "capacity": 30,
+    "num_bikes_available": 11,
+    "num_docks_available": 19,
+    "status": "moderate",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0010",
+    "name": "Stamps Landing",
+    "location": [
+      49.26893,
+      -123.11813
+    ],
+    "capacity": 14,
+    "num_bikes_available": 3,
+    "num_docks_available": 11,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0005",
+    "name": "Dunsmuir & Beatty",
+    "location": [
+      49.279764,
+      -123.110154
+    ],
+    "capacity": 26,
+    "num_bikes_available": 16,
+    "num_docks_available": 10,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2116",
+    "name": "Orchard Commons",
+    "location": [
+      49.259999,
+      -123.250902
+    ],
+    "capacity": 26,
+    "num_bikes_available": 1,
+    "num_docks_available": 25,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0313",
+    "name": "Nelson & Denman",
+    "location": [
+      49.289071,
+      -123.138407
+    ],
+    "capacity": 18,
+    "num_bikes_available": 11,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0206",
+    "name": "8th & Scotia",
+    "location": [
+      49.263635,
+      -123.099236
+    ],
+    "capacity": 12,
+    "num_bikes_available": 5,
+    "num_docks_available": 7,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0132",
+    "name": "14th & Ontario",
+    "location": [
+      49.25849,
+      -123.104799
+    ],
+    "capacity": 16,
+    "num_bikes_available": 1,
+    "num_docks_available": 15,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0101",
+    "name": "Stanley Park - Vancouver Aquarium",
+    "location": [
+      49.299292,
+      -123.130281
+    ],
+    "capacity": 17,
+    "num_bikes_available": 9,
+    "num_docks_available": 8,
+    "status": "optimal",
+    "demand_level": "critical"
+  },
+  {
+    "station_id": "0052",
+    "name": "Cambie & Water",
+    "location": [
+      49.284605,
+      -123.108662
+    ],
+    "capacity": 32,
+    "num_bikes_available": 19,
+    "num_docks_available": 13,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0047",
+    "name": "Chilco & Beach",
+    "location": [
+      49.28972,
+      -123.144028
+    ],
+    "capacity": 0,
+    "num_bikes_available": 0,
+    "num_docks_available": 0,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0352",
+    "name": "Commercial & 20th",
+    "location": [
+      49.252656,
+      -123.067965
+    ],
+    "capacity": 20,
+    "num_bikes_available": 2,
+    "num_docks_available": 18,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0254",
+    "name": "Grandview & Commercial",
+    "location": [
+      49.263746,
+      -123.069892
+    ],
+    "capacity": 16,
+    "num_bikes_available": 9,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0009",
+    "name": "Spyglass & Seawall",
+    "location": [
+      49.270877,
+      -123.115103
+    ],
+    "capacity": 14,
+    "num_bikes_available": 5,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0287",
+    "name": "Carolina & Great Northern Way",
+    "location": [
+      49.267266,
+      -123.090786
+    ],
+    "capacity": 16,
+    "num_bikes_available": 5,
+    "num_docks_available": 11,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0212",
+    "name": "Union & Dunlevy",
+    "location": [
+      49.277595,
+      -123.09583
+    ],
+    "capacity": 16,
+    "num_bikes_available": 7,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0159",
+    "name": "Vine & 4th",
+    "location": [
+      49.268339,
+      -123.157443
+    ],
+    "capacity": 18,
+    "num_bikes_available": 4,
+    "num_docks_available": 13,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0403",
+    "name": "Highbury & 8th",
+    "location": [
+      49.265442,
+      -123.187738
+    ],
+    "capacity": 20,
+    "num_bikes_available": 7,
+    "num_docks_available": 13,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0200",
+    "name": "Cardero & Bayshore",
+    "location": [
+      49.291597,
+      -123.129158
+    ],
+    "capacity": 20,
+    "num_bikes_available": 6,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0193",
+    "name": "Science World",
+    "location": [
+      49.273691,
+      -123.102232
+    ],
+    "capacity": 16,
+    "num_bikes_available": 16,
+    "num_docks_available": 0,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0273",
+    "name": "Victoria & 4th",
+    "location": [
+      49.266725,
+      -123.065925
+    ],
+    "capacity": 16,
+    "num_bikes_available": 10,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0444",
+    "name": "Balaclava & Broadway",
+    "location": [
+      49.264483,
+      -123.173926
+    ],
+    "capacity": 18,
+    "num_bikes_available": 8,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0011",
+    "name": "Ontario & Seawall",
+    "location": [
+      49.271721,
+      -123.104207
+    ],
+    "capacity": 20,
+    "num_bikes_available": 19,
+    "num_docks_available": 1,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0260",
+    "name": "10th & Fraser",
+    "location": [
+      49.26151,
+      -123.089413
+    ],
+    "capacity": 14,
+    "num_bikes_available": 4,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0093",
+    "name": "Chilco & Robson",
+    "location": [
+      49.293257,
+      -123.138563
+    ],
+    "capacity": 20,
+    "num_bikes_available": 6,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0114",
+    "name": "Cypress & 14th",
+    "location": [
+      49.25919,
+      -123.148268
+    ],
+    "capacity": 12,
+    "num_bikes_available": 4,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0069",
+    "name": "7th & Granville",
+    "location": [
+      49.2653,
+      -123.13811
+    ],
+    "capacity": 14,
+    "num_bikes_available": 1,
+    "num_docks_available": 13,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0219",
+    "name": "Hawks & Union",
+    "location": [
+      49.277333,
+      -123.087359
+    ],
+    "capacity": 16,
+    "num_bikes_available": 13,
+    "num_docks_available": 3,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0071",
+    "name": "14th & Granville",
+    "location": [
+      49.25894,
+      -123.139272
+    ],
+    "capacity": 14,
+    "num_bikes_available": 5,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0191",
+    "name": "7th & Laurel",
+    "location": [
+      49.265071,
+      -123.123864
+    ],
+    "capacity": 14,
+    "num_bikes_available": 2,
+    "num_docks_available": 12,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0223",
+    "name": "Commercial & Adanac",
+    "location": [
+      49.277436,
+      -123.070427
+    ],
+    "capacity": 16,
+    "num_bikes_available": 9,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0172",
+    "name": "10th & Columbia",
+    "location": [
+      49.262206,
+      -123.109091
+    ],
+    "capacity": 14,
+    "num_bikes_available": 3,
+    "num_docks_available": 11,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0218",
+    "name": "Carrall & Seawall",
+    "location": [
+      49.276294,
+      -123.106534
+    ],
+    "capacity": 18,
+    "num_bikes_available": 5,
+    "num_docks_available": 11,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0142",
+    "name": "Beach & Cardero",
+    "location": [
+      49.283298,
+      -123.142288
+    ],
+    "capacity": 22,
+    "num_bikes_available": 9,
+    "num_docks_available": 13,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0235",
+    "name": "Charles & Commercial",
+    "location": [
+      49.273103,
+      -123.069892
+    ],
+    "capacity": 22,
+    "num_bikes_available": 4,
+    "num_docks_available": 16,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0108",
+    "name": "1st & Chestnut",
+    "location": [
+      49.270721,
+      -123.146175
+    ],
+    "capacity": 26,
+    "num_bikes_available": 17,
+    "num_docks_available": 8,
+    "status": "optimal",
+    "demand_level": "critical"
+  },
+  {
+    "station_id": "0017",
+    "name": "Marinaside & Davie",
+    "location": [
+      49.273471,
+      -123.118016
+    ],
+    "capacity": 22,
+    "num_bikes_available": 12,
+    "num_docks_available": 10,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0532",
+    "name": "22nd & Cambie",
+    "location": [
+      49.251358,
+      -123.115637
+    ],
+    "capacity": 14,
+    "num_bikes_available": 5,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0199",
+    "name": "Georgia & Main",
+    "location": [
+      49.278529,
+      -123.100017
+    ],
+    "capacity": 20,
+    "num_bikes_available": 12,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0084",
+    "name": "Beach & Broughton",
+    "location": [
+      49.281301,
+      -123.139108
+    ],
+    "capacity": 22,
+    "num_bikes_available": 16,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0524",
+    "name": "King Edward & Cambie",
+    "location": [
+      49.249184,
+      -123.116141
+    ],
+    "capacity": 18,
+    "num_bikes_available": 5,
+    "num_docks_available": 13,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0187",
+    "name": "Bute & Davie",
+    "location": [
+      49.282055,
+      -123.133045
+    ],
+    "capacity": 20,
+    "num_bikes_available": 5,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0480",
+    "name": "Arbutus & Nanton",
+    "location": [
+      49.247854,
+      -123.153422
+    ],
+    "capacity": 18,
+    "num_bikes_available": 4,
+    "num_docks_available": 14,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0041",
+    "name": "Cardero & Robson",
+    "location": [
+      49.289255,
+      -123.132677
+    ],
+    "capacity": 26,
+    "num_bikes_available": 21,
+    "num_docks_available": 5,
+    "status": "optimal",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0526",
+    "name": "29th & Cambie",
+    "location": [
+      49.245135,
+      -123.116098
+    ],
+    "capacity": 20,
+    "num_bikes_available": 0,
+    "num_docks_available": 20,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0102",
+    "name": "Stanley Park - Second Beach North",
+    "location": [
+      49.29534,
+      -123.150433
+    ],
+    "capacity": 16,
+    "num_bikes_available": 7,
+    "num_docks_available": 6,
+    "status": "moderate",
+    "demand_level": "high"
+  },
+  {
+    "station_id": "0224",
+    "name": "Pender & Commercial",
+    "location": [
+      49.280332,
+      -123.070068
+    ],
+    "capacity": 16,
+    "num_bikes_available": 9,
+    "num_docks_available": 7,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0180",
+    "name": "Columbia & 14th",
+    "location": [
+      49.258902,
+      -123.109596
+    ],
+    "capacity": 14,
+    "num_bikes_available": 2,
+    "num_docks_available": 12,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0068",
+    "name": "Cypress & 10th",
+    "location": [
+      49.262944,
+      -123.148109
+    ],
+    "capacity": 14,
+    "num_bikes_available": 7,
+    "num_docks_available": 7,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0210",
+    "name": "Burrard & 14th",
+    "location": [
+      49.259469,
+      -123.145718
+    ],
+    "capacity": 18,
+    "num_bikes_available": 8,
+    "num_docks_available": 10,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0177",
+    "name": "Quebec & 1st",
+    "location": [
+      49.27033,
+      -123.10275
+    ],
+    "capacity": 18,
+    "num_bikes_available": 7,
+    "num_docks_available": 11,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0217",
+    "name": "Smithe & Burrard",
+    "location": [
+      49.282503,
+      -123.124697
+    ],
+    "capacity": 18,
+    "num_bikes_available": 8,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0129",
+    "name": "Richards & Robson",
+    "location": [
+      49.280216,
+      -123.117639
+    ],
+    "capacity": 20,
+    "num_bikes_available": 12,
+    "num_docks_available": 6,
+    "status": "optimal",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0006",
+    "name": "Olympic Village Station",
+    "location": [
+      49.266314,
+      -123.116011
+    ],
+    "capacity": 26,
+    "num_bikes_available": 23,
+    "num_docks_available": 3,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2131",
+    "name": "Brock Commons",
+    "location": [
+      49.269172,
+      -123.25279
+    ],
+    "capacity": 20,
+    "num_bikes_available": 17,
+    "num_docks_available": 2,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0272",
+    "name": "Pender & Victoria",
+    "location": [
+      49.280197,
+      -123.065859
+    ],
+    "capacity": 16,
+    "num_bikes_available": 8,
+    "num_docks_available": 8,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0053",
+    "name": "Keefer & Abbott",
+    "location": [
+      49.279821,
+      -123.10802
+    ],
+    "capacity": 28,
+    "num_bikes_available": 11,
+    "num_docks_available": 16,
+    "status": "moderate",
+    "demand_level": "moderate"
+  },
+  {
+    "station_id": "0298",
+    "name": "6th & Carolina",
+    "location": [
+      49.265213,
+      -123.090785
+    ],
+    "capacity": 16,
+    "num_bikes_available": 8,
+    "num_docks_available": 7,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0201",
+    "name": "Rogers Tower",
+    "location": [
+      49.288682,
+      -123.11818
+    ],
+    "capacity": 18,
+    "num_bikes_available": 9,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0484",
+    "name": "Yew & Broadway",
+    "location": [
+      49.263523,
+      -123.155267
+    ],
+    "capacity": 18,
+    "num_bikes_available": 10,
+    "num_docks_available": 8,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0716",
+    "name": "Sasamat & 10th",
+    "location": [
+      49.264019,
+      -123.209176
+    ],
+    "capacity": 22,
+    "num_bikes_available": 10,
+    "num_docks_available": 12,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0016",
+    "name": "Pender & Burrard",
+    "location": [
+      49.287097,
+      -123.118551
+    ],
+    "capacity": 26,
+    "num_bikes_available": 15,
+    "num_docks_available": 11,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0236",
+    "name": "Keith & 6th",
+    "location": [
+      49.265005,
+      -123.079481
+    ],
+    "capacity": 28,
+    "num_bikes_available": 17,
+    "num_docks_available": 11,
+    "status": "optimal",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0037",
+    "name": "Hornby & Nelson",
+    "location": [
+      49.28062,
+      -123.12482
+    ],
+    "capacity": 18,
+    "num_bikes_available": 1,
+    "num_docks_available": 16,
+    "status": "low",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0107",
+    "name": "8th & Ontario",
+    "location": [
+      49.263837,
+      -123.105173
+    ],
+    "capacity": 16,
+    "num_bikes_available": 7,
+    "num_docks_available": 9,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "0081",
+    "name": "7th & Heather",
+    "location": [
+      49.265089,
+      -123.119425
+    ],
+    "capacity": 18,
+    "num_bikes_available": 5,
+    "num_docks_available": 13,
+    "status": "moderate",
+    "demand_level": "low"
+  },
+  {
+    "station_id": "2117",
+    "name": "Totem Park",
+    "location": [
+      49.2585,
+      -123.2521
+    ],
+    "capacity": 24,
+    "num_bikes_available": 0,
+    "num_docks_available": 24,
+    "status": "low",
+    "demand_level": "low"
+  }
+]
